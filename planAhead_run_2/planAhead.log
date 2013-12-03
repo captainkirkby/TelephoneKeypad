@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Mon Dec 02 22:19:33 2013
+# Process ID: 9096
+# Log file: K:/Final Project/planAhead_run_2/planAhead.log
+# Journal file: K:/Final Project/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.6/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {K:/Final Project/pa.fromNetlist.tcl}
+# create_project -name FinalProject -dir "K:/Final Project/planAhead_run_3" -part xc3s500efg320-4
+create_project: Time (s): elapsed = 00:00:18 . Memory (MB): peak = 420.746 ; gain = 69.410
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "K:/Final Project/passkeyEntry.ngc" [ get_property srcset [ current_run ] ]

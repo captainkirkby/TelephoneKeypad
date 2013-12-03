@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.6 (64-bit)
+# Build 269223 by xbuild on Wed Jun  5 11:14:03 MDT 2013
+# Start of session at: Mon Dec 02 22:19:33 2013
+# Process ID: 12088
+# Log file: K:/Final Project/planAhead_run_1/planAhead.log
+# Journal file: K:/Final Project/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {K:/Final Project/pa.fromNetlist.tcl}

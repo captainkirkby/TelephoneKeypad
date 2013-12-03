@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.59 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.61 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.39 secs
  
 --> Reading design: passkeyEntry.prj
 
@@ -113,8 +113,7 @@ Architecture my_clk_div of Entity my_clk_div is up to date.
 Compiling vhdl file "K:/Final Project/keypadDecoder.vhd" in Library work.
 Architecture behavioral of Entity keypaddecoder is up to date.
 Compiling vhdl file "K:/Final Project/passkeyEntry.vhd" in Library work.
-Entity <passkeyentry> compiled.
-Entity <passkeyentry> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity passkeyentry is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -704,8 +703,8 @@ Offset:              8.551ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 25.00 secs
-Total CPU time to Xst completion: 25.05 secs
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 26.80 secs
  
 --> 
 
