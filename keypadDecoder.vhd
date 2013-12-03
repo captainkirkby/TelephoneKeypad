@@ -59,18 +59,84 @@ begin
 			-- Column 0 is low
 			COLUMNS <= "110";
 			LEDS <= "001";
+			
+			-- 1 pressed
+			if(ROWS = "1110") then
+				t_valid <= '1';
+				t_output <= "0001";
+			-- 4 pressed
+			elsif(ROWS = "1101") then
+				t_valid <= '1';
+				t_output <= "0100";
+			-- 7 pressed
+			elsif(ROWS = "1011") then
+				t_valid <= '1';
+				t_output <= "0111";
+			-- * pressed
+			elsif(ROWS = "0111") then
+				t_valid <= '1';
+				t_output <= "1010";
+			-- Nothing pressed
+			elsif(ROWS = "1111") then
+				t_valid <= '0';
+				t_output <= "1111";
+			end if;
 
 		when COL1 =>
 			NS <= COL2;
 			-- Column 1 is low
 			COLUMNS <= "101";
 			LEDS <= "010";
+			
+			-- 2 pressed
+			if(ROWS = "1110") then
+				t_valid <= '1';
+				t_output <= "0010";
+			-- 5 pressed
+			elsif(ROWS = "1101") then
+				t_valid <= '1';
+				t_output <= "0101";
+			-- 8 pressed
+			elsif(ROWS = "1011") then
+				t_valid <= '1';
+				t_output <= "1000";
+			-- 0 pressed
+			elsif(ROWS = "0111") then
+				t_valid <= '1';
+				t_output <= "0000";
+			-- Nothing pressed
+			elsif(ROWS = "1111") then
+				t_valid <= '0';
+				t_output <= "1111";
+			end if;
 
 		when COL2 =>
 			NS <= COL0;
 			-- Column 2 is low
 			COLUMNS <= "011";
 			LEDS <= "100";
+			
+			-- 3 pressed
+			if(ROWS = "1110") then
+				t_valid <= '1';
+				t_output <= "0011";
+			-- 6 pressed
+			elsif(ROWS = "1101") then
+				t_valid <= '1';
+				t_output <= "0110";
+			-- 9 pressed
+			elsif(ROWS = "1011") then
+				t_valid <= '1';
+				t_output <= "1001";
+			-- # pressed
+			elsif(ROWS = "0111") then
+				t_valid <= '1';
+				t_output <= "1011";
+			-- Nothing pressed
+			elsif(ROWS = "1111") then
+				t_valid <= '0';
+				t_output <= "1111";
+			end if;
 
 	end case;
 end process comb_proc;

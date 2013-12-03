@@ -17,7 +17,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project ID (random number)</B></TD>
-<TD><xtag-property name="RandomID">fb9fb9426ce0489892da91d5b7f2f4f1</xtag-property>.<xtag-property name="ProjectID">E281CFD5DCA74C369B1DB1D6D44D334F</xtag-property>.<xtag-property name="ProjectIteration">3</xtag-property></TD>
+<TD><xtag-property name="RandomID">fb9fb9426ce0489892da91d5b7f2f4f1</xtag-property>.<xtag-property name="ProjectID">E281CFD5DCA74C369B1DB1D6D44D334F</xtag-property>.<xtag-property name="ProjectIteration">4</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Target Package:</B></TD>
 <TD><xtag-property name="TargetPackage">fg320</xtag-property></TD>
 </TR>
@@ -29,7 +29,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Date Generated</B></TD>
-<TD><xtag-property name="Date Generated">2013-12-02T20:23:25</xtag-property></TD>
+<TD><xtag-property name="Date Generated">2013-12-02T20:35:04</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Tool Flow</B></TD>
 <TD><xtag-property name="ToolFlow">ISE</xtag-property></TD>
 </TR>
@@ -80,6 +80,12 @@
 </xtag-group>
 <xtag-group><xtag-group-name name="FSMs=1">FSMs=1</xtag-group-name>
 </xtag-group>
+<xtag-group><xtag-group-name name="Latches=2">Latches=2</xtag-group-name>
+<UL>
+<LI><xtag-item1>1-bit latch=1</xtag-item1></LI>
+<LI><xtag-item1>4-bit latch=1</xtag-item1></LI>
+</UL>
+</xtag-group>
 <xtag-group><xtag-group-name name="ROMs=2">ROMs=2</xtag-group-name>
 <UL>
 <LI><xtag-item1>16x4-bit ROM=1</xtag-item1></LI>
@@ -99,15 +105,16 @@
 <UL>
 <LI><xtag-item1>AGG_BONDED_IO=23</xtag-item1></LI>
 <LI><xtag-item1>AGG_IO=23</xtag-item1></LI>
-<LI><xtag-item1>AGG_SLICE=48</xtag-item1></LI>
-<LI><xtag-item1>NUM_4_INPUT_LUT=85</xtag-item1></LI>
+<LI><xtag-item1>AGG_SLICE=66</xtag-item1></LI>
+<LI><xtag-item1>NUM_4_INPUT_LUT=118</xtag-item1></LI>
 <LI><xtag-item1>NUM_BONDED_IBUF=5</xtag-item1></LI>
 <LI><xtag-item1>NUM_BONDED_IOB=18</xtag-item1></LI>
 <LI><xtag-item1>NUM_BUFGMUX=1</xtag-item1></LI>
 <LI><xtag-item1>NUM_CYMUX=78</xtag-item1></LI>
 <LI><xtag-item1>NUM_LUT_RT=62</xtag-item1></LI>
-<LI><xtag-item1>NUM_SLICEL=48</xtag-item1></LI>
+<LI><xtag-item1>NUM_SLICEL=66</xtag-item1></LI>
 <LI><xtag-item1>NUM_SLICE_FF=71</xtag-item1></LI>
+<LI><xtag-item1>NUM_SLICE_LATCH=5</xtag-item1></LI>
 <LI><xtag-item1>NUM_XOR=64</xtag-item1></LI>
 </UL>
 </xtag-group>
@@ -115,26 +122,31 @@
 <TD>
 <xtag-group><xtag-group-name name="NetStatistics">NetStatistics</xtag-group-name>
 <UL>
-<LI><xtag-item1>NumNets_Active=142</xtag-item1></LI>
+<LI><xtag-item1>NumNets_Active=175</xtag-item1></LI>
 <LI><xtag-item1>NumNets_Gnd=1</xtag-item1></LI>
 <LI><xtag-item1>NumNets_Vcc=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_CLKPIN=38</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_CLKPIN=43</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_CNTRLPIN=35</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_DOUBLE=130</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_DUMMY=139</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_DUMMYESC=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_GLOBAL=11</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_HFULLHEX=5</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_DOUBLE=191</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_DUMMY=264</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_DUMMYESC=5</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_GLOBAL=12</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_HFULLHEX=1</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_HLONG=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_HUNIHEX=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_INPUT=190</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_IOBOUTPUT=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_OMUX=139</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_OUTPUT=116</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_PREBXBY=19</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_VFULLHEX=6</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_VLONG=2</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_VUNIHEX=10</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_HUNIHEX=5</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_INPUT=322</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_IOBOUTPUT=5</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_OMUX=158</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_OUTPUT=149</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_PREBXBY=45</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_VFULLHEX=15</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_VLONG=3</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_VUNIHEX=26</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_DOUBLE=1</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_INPUT=2</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_OMUX=1</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_OUTPUT=2</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_PREBXBY=2</xtag-item1></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="SiteStatistics">SiteStatistics</xtag-group-name>
@@ -144,7 +156,7 @@
 <LI><xtag-item1>IBUF-DIFFS=3</xtag-item1></LI>
 <LI><xtag-item1>IOB-DIFFM=11</xtag-item1></LI>
 <LI><xtag-item1>IOB-DIFFS=4</xtag-item1></LI>
-<LI><xtag-item1>SLICEL-SLICEM=4</xtag-item1></LI>
+<LI><xtag-item1>SLICEL-SLICEM=12</xtag-item1></LI>
 </UL>
 </xtag-group>
 </TD>
@@ -162,14 +174,14 @@
 <LI><xtag-item2>IOB=18</xtag-item2></LI>
 <LI><xtag-item2>IOB_OUTBUF=18</xtag-item2></LI>
 <LI><xtag-item2>IOB_PAD=18</xtag-item2></LI>
-<LI><xtag-item2>SLICEL=48</xtag-item2></LI>
+<LI><xtag-item2>SLICEL=66</xtag-item2></LI>
 <LI><xtag-item2>SLICEL_C1VDD=2</xtag-item2></LI>
 <LI><xtag-item2>SLICEL_CYMUXF=40</xtag-item2></LI>
 <LI><xtag-item2>SLICEL_CYMUXG=38</xtag-item2></LI>
-<LI><xtag-item2>SLICEL_F=42</xtag-item2></LI>
-<LI><xtag-item2>SLICEL_FFX=33</xtag-item2></LI>
-<LI><xtag-item2>SLICEL_FFY=38</xtag-item2></LI>
-<LI><xtag-item2>SLICEL_G=43</xtag-item2></LI>
+<LI><xtag-item2>SLICEL_F=59</xtag-item2></LI>
+<LI><xtag-item2>SLICEL_FFX=37</xtag-item2></LI>
+<LI><xtag-item2>SLICEL_FFY=39</xtag-item2></LI>
+<LI><xtag-item2>SLICEL_G=59</xtag-item2></LI>
 <LI><xtag-item2>SLICEL_GNDF=38</xtag-item2></LI>
 <LI><xtag-item2>SLICEL_GNDG=38</xtag-item2></LI>
 <LI><xtag-item2>SLICEL_XORF=32</xtag-item2></LI>
@@ -224,7 +236,7 @@
 <LI><xtag-item3>BY=[BY:3] [BY_INV:2]</xtag-item3></LI>
 <LI><xtag-item3>CE=[CE:2] [CE_INV:0]</xtag-item3></LI>
 <LI><xtag-item3>CIN=[CIN_INV:0] [CIN:36]</xtag-item3></LI>
-<LI><xtag-item3>CLK=[CLK:38] [CLK_INV:0]</xtag-item3></LI>
+<LI><xtag-item3>CLK=[CLK:38] [CLK_INV:5]</xtag-item3></LI>
 <LI><xtag-item3>SR=[SR:33] [SR_INV:0]</xtag-item3></LI>
 </UL>
 </xtag-group>
@@ -243,13 +255,13 @@
 </xtag-group>
 <xtag-group><xtag-group-name name="SLICEL_FFX">SLICEL_FFX</xtag-group-name>
 <UL>
-<LI><xtag-item3>CK=[CK:33] [CK_INV:0]</xtag-item3></LI>
-<LI><xtag-item3>D=[D:33] [D_INV:0]</xtag-item3></LI>
-<LI><xtag-item3>FFX_INIT_ATTR=[INIT0:33]</xtag-item3></LI>
-<LI><xtag-item3>FFX_SR_ATTR=[SRLOW:33]</xtag-item3></LI>
-<LI><xtag-item3>LATCH_OR_FF=[FF:33]</xtag-item3></LI>
+<LI><xtag-item3>CK=[CK:33] [CK_INV:4]</xtag-item3></LI>
+<LI><xtag-item3>D=[D:37] [D_INV:0]</xtag-item3></LI>
+<LI><xtag-item3>FFX_INIT_ATTR=[INIT0:37]</xtag-item3></LI>
+<LI><xtag-item3>FFX_SR_ATTR=[SRLOW:37]</xtag-item3></LI>
+<LI><xtag-item3>LATCH_OR_FF=[FF:33] [LATCH:4]</xtag-item3></LI>
 <LI><xtag-item3>SR=[SR:32] [SR_INV:0]</xtag-item3></LI>
-<LI><xtag-item3>SYNC_ATTR=[ASYNC:1] [SYNC:32]</xtag-item3></LI>
+<LI><xtag-item3>SYNC_ATTR=[ASYNC:5] [SYNC:32]</xtag-item3></LI>
 </UL>
 </TD>
 <TD>
@@ -257,13 +269,13 @@
 <xtag-group><xtag-group-name name="SLICEL_FFY">SLICEL_FFY</xtag-group-name>
 <UL>
 <LI><xtag-item3>CE=[CE:2] [CE_INV:0]</xtag-item3></LI>
-<LI><xtag-item3>CK=[CK:38] [CK_INV:0]</xtag-item3></LI>
-<LI><xtag-item3>D=[D:36] [D_INV:2]</xtag-item3></LI>
-<LI><xtag-item3>FFY_INIT_ATTR=[INIT0:37] [INIT1:1]</xtag-item3></LI>
-<LI><xtag-item3>FFY_SR_ATTR=[SRLOW:38]</xtag-item3></LI>
-<LI><xtag-item3>LATCH_OR_FF=[FF:38]</xtag-item3></LI>
+<LI><xtag-item3>CK=[CK:38] [CK_INV:1]</xtag-item3></LI>
+<LI><xtag-item3>D=[D:37] [D_INV:2]</xtag-item3></LI>
+<LI><xtag-item3>FFY_INIT_ATTR=[INIT0:38] [INIT1:1]</xtag-item3></LI>
+<LI><xtag-item3>FFY_SR_ATTR=[SRLOW:39]</xtag-item3></LI>
+<LI><xtag-item3>LATCH_OR_FF=[FF:38] [LATCH:1]</xtag-item3></LI>
 <LI><xtag-item3>SR=[SR:33] [SR_INV:0]</xtag-item3></LI>
-<LI><xtag-item3>SYNC_ATTR=[ASYNC:5] [SYNC:33]</xtag-item3></LI>
+<LI><xtag-item3>SYNC_ATTR=[ASYNC:6] [SYNC:33]</xtag-item3></LI>
 </UL>
 </TD>
 <TD>
@@ -342,21 +354,21 @@
 <LI><xtag-item1>BY=5</xtag-item1></LI>
 <LI><xtag-item1>CE=2</xtag-item1></LI>
 <LI><xtag-item1>CIN=36</xtag-item1></LI>
-<LI><xtag-item1>CLK=38</xtag-item1></LI>
+<LI><xtag-item1>CLK=43</xtag-item1></LI>
 <LI><xtag-item1>COUT=38</xtag-item1></LI>
-<LI><xtag-item1>F1=42</xtag-item1></LI>
-<LI><xtag-item1>F2=10</xtag-item1></LI>
-<LI><xtag-item1>F3=8</xtag-item1></LI>
-<LI><xtag-item1>F4=8</xtag-item1></LI>
-<LI><xtag-item1>G1=43</xtag-item1></LI>
-<LI><xtag-item1>G2=11</xtag-item1></LI>
-<LI><xtag-item1>G3=8</xtag-item1></LI>
-<LI><xtag-item1>G4=8</xtag-item1></LI>
+<LI><xtag-item1>F1=59</xtag-item1></LI>
+<LI><xtag-item1>F2=27</xtag-item1></LI>
+<LI><xtag-item1>F3=25</xtag-item1></LI>
+<LI><xtag-item1>F4=23</xtag-item1></LI>
+<LI><xtag-item1>G1=59</xtag-item1></LI>
+<LI><xtag-item1>G2=27</xtag-item1></LI>
+<LI><xtag-item1>G3=24</xtag-item1></LI>
+<LI><xtag-item1>G4=19</xtag-item1></LI>
 <LI><xtag-item1>SR=33</xtag-item1></LI>
-<LI><xtag-item1>X=2</xtag-item1></LI>
-<LI><xtag-item1>XQ=33</xtag-item1></LI>
-<LI><xtag-item1>Y=2</xtag-item1></LI>
-<LI><xtag-item1>YQ=38</xtag-item1></LI>
+<LI><xtag-item1>X=15</xtag-item1></LI>
+<LI><xtag-item1>XQ=37</xtag-item1></LI>
+<LI><xtag-item1>Y=17</xtag-item1></LI>
+<LI><xtag-item1>YQ=39</xtag-item1></LI>
 </UL>
 </TD>
 <TD>
@@ -384,18 +396,18 @@
 </xtag-group>
 <xtag-group><xtag-group-name name="SLICEL_F">SLICEL_F</xtag-group-name>
 <UL>
-<LI><xtag-item1>A1=42</xtag-item1></LI>
-<LI><xtag-item1>A2=10</xtag-item1></LI>
-<LI><xtag-item1>A3=8</xtag-item1></LI>
-<LI><xtag-item1>A4=8</xtag-item1></LI>
-<LI><xtag-item1>D=42</xtag-item1></LI>
+<LI><xtag-item1>A1=59</xtag-item1></LI>
+<LI><xtag-item1>A2=27</xtag-item1></LI>
+<LI><xtag-item1>A3=25</xtag-item1></LI>
+<LI><xtag-item1>A4=23</xtag-item1></LI>
+<LI><xtag-item1>D=59</xtag-item1></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="SLICEL_FFX">SLICEL_FFX</xtag-group-name>
 <UL>
-<LI><xtag-item1>CK=33</xtag-item1></LI>
-<LI><xtag-item1>D=33</xtag-item1></LI>
-<LI><xtag-item1>Q=33</xtag-item1></LI>
+<LI><xtag-item1>CK=37</xtag-item1></LI>
+<LI><xtag-item1>D=37</xtag-item1></LI>
+<LI><xtag-item1>Q=37</xtag-item1></LI>
 <LI><xtag-item1>SR=32</xtag-item1></LI>
 </UL>
 </TD>
@@ -404,19 +416,19 @@
 <xtag-group><xtag-group-name name="SLICEL_FFY">SLICEL_FFY</xtag-group-name>
 <UL>
 <LI><xtag-item1>CE=2</xtag-item1></LI>
-<LI><xtag-item1>CK=38</xtag-item1></LI>
-<LI><xtag-item1>D=38</xtag-item1></LI>
-<LI><xtag-item1>Q=38</xtag-item1></LI>
+<LI><xtag-item1>CK=39</xtag-item1></LI>
+<LI><xtag-item1>D=39</xtag-item1></LI>
+<LI><xtag-item1>Q=39</xtag-item1></LI>
 <LI><xtag-item1>SR=33</xtag-item1></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="SLICEL_G">SLICEL_G</xtag-group-name>
 <UL>
-<LI><xtag-item1>A1=43</xtag-item1></LI>
-<LI><xtag-item1>A2=11</xtag-item1></LI>
-<LI><xtag-item1>A3=8</xtag-item1></LI>
-<LI><xtag-item1>A4=8</xtag-item1></LI>
-<LI><xtag-item1>D=43</xtag-item1></LI>
+<LI><xtag-item1>A1=59</xtag-item1></LI>
+<LI><xtag-item1>A2=27</xtag-item1></LI>
+<LI><xtag-item1>A3=24</xtag-item1></LI>
+<LI><xtag-item1>A4=19</xtag-item1></LI>
+<LI><xtag-item1>D=59</xtag-item1></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="SLICEL_GNDF">SLICEL_GNDF</xtag-group-name>
@@ -470,6 +482,12 @@
 <LI><xtag-cmdline>par -w -intstyle ise -ol high -t 1 &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
 <LI><xtag-cmdline>trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
 <LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>xst -intstyle ise -ifn &lt;ise_file&gt;</xtag-cmdline></LI>
+<LI><xtag-cmdline>ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc &lt;fname&gt;.ucf -p xc3s500e-fg320-4 &lt;ise_file&gt; &lt;fname&gt;.ngd</xtag-cmdline></LI>
+<LI><xtag-cmdline>map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o &lt;fname&gt;.ncd &lt;fname&gt;.ngd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>par -w -intstyle ise -ol high -t 1 &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
 <LI><xtag-cmdline>fuse</xtag-cmdline></LI>
 </xtag-section></UL></TD></TR>
 </TABLE>
@@ -477,8 +495,8 @@
 
 <tr>
   <td><xtag-program-name>bitgen</xtag-program-name></td>
-  <td><xtag-total-run-started>85</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>85</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>86</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>86</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -487,8 +505,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>map</xtag-program-name></td>
-  <td><xtag-total-run-started>104</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>102</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>105</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>103</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -497,8 +515,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>ngdbuild</xtag-program-name></td>
-  <td><xtag-total-run-started>111</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>110</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>112</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>111</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -507,8 +525,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>par</xtag-program-name></td>
-  <td><xtag-total-run-started>102</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>99</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>103</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>100</xtag-total-run-finished></td>
   <td><xtag-total-error>2</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -517,8 +535,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>trce</xtag-program-name></td>
-  <td><xtag-total-run-started>99</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>99</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>100</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>100</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -527,8 +545,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>xst</xtag-program-name></td>
-  <td><xtag-total-run-started>200</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>196</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>201</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>197</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -572,7 +590,7 @@ Help files</xtag-group-name></B></TD></TR>
 <TD><xtag-design-property-name>PROP_intProjectCreationTimestamp</xtag-design-property-name>=<xtag-design-property-value>2013-12-02T18:24:34</xtag-design-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWbtProjectID</xtag-design-property-name>=<xtag-design-property-value>E281CFD5DCA74C369B1DB1D6D44D334F</xtag-design-property-value></TD>
-<TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>3</xtag-process-property-value></TD>
+<TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>4</xtag-process-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWorkingDirLocWRTProjDir</xtag-design-property-name>=<xtag-design-property-value>Same</xtag-design-property-value></TD>
 <TD><xtag-design-property-name>PROP_intWorkingDirUsed</xtag-design-property-name>=<xtag-design-property-value>No</xtag-design-property-value></TD>
@@ -606,18 +624,22 @@ Help files</xtag-group-name></B></TD></TR>
 </TR>
 <TR>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_GND</xtag-preunisim-param-name>=<xtag-preunisim-param-value>1</xtag-preunisim-param-value></TD>
+<TD><xtag-preunisim-param-name>NGDBUILD_NUM_IBUF</xtag-preunisim-param-name>=<xtag-preunisim-param-value>4</xtag-preunisim-param-value></TD>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_INV</xtag-preunisim-param-name>=<xtag-preunisim-param-value>7</xtag-preunisim-param-value></TD>
-<TD><xtag-preunisim-param-name>NGDBUILD_NUM_LUT1</xtag-preunisim-param-name>=<xtag-preunisim-param-value>62</xtag-preunisim-param-value></TD>
-<TD><xtag-preunisim-param-name>NGDBUILD_NUM_LUT2</xtag-preunisim-param-name>=<xtag-preunisim-param-value>5</xtag-preunisim-param-value></TD>
+<TD><xtag-preunisim-param-name>NGDBUILD_NUM_LD</xtag-preunisim-param-name>=<xtag-preunisim-param-value>5</xtag-preunisim-param-value></TD>
 </TR>
 <TR>
-<TD><xtag-preunisim-param-name>NGDBUILD_NUM_LUT4</xtag-preunisim-param-name>=<xtag-preunisim-param-value>16</xtag-preunisim-param-value></TD>
+<TD><xtag-preunisim-param-name>NGDBUILD_NUM_LUT1</xtag-preunisim-param-name>=<xtag-preunisim-param-value>62</xtag-preunisim-param-value></TD>
+<TD><xtag-preunisim-param-name>NGDBUILD_NUM_LUT2</xtag-preunisim-param-name>=<xtag-preunisim-param-value>5</xtag-preunisim-param-value></TD>
+<TD><xtag-preunisim-param-name>NGDBUILD_NUM_LUT3</xtag-preunisim-param-name>=<xtag-preunisim-param-value>7</xtag-preunisim-param-value></TD>
+<TD><xtag-preunisim-param-name>NGDBUILD_NUM_LUT4</xtag-preunisim-param-name>=<xtag-preunisim-param-value>42</xtag-preunisim-param-value></TD>
+</TR>
+<TR>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_MUXCY</xtag-preunisim-param-name>=<xtag-preunisim-param-value>78</xtag-preunisim-param-value></TD>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_OBUF</xtag-preunisim-param-name>=<xtag-preunisim-param-value>18</xtag-preunisim-param-value></TD>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_VCC</xtag-preunisim-param-name>=<xtag-preunisim-param-value>1</xtag-preunisim-param-value></TD>
-</TR>
-<TR>
 <TD><xtag-preunisim-param-name>NGDBUILD_NUM_XORCY</xtag-preunisim-param-name>=<xtag-preunisim-param-value>64</xtag-preunisim-param-value></TD>
+</TR>
 <TR ALIGN=CENTER><TD COLSPAN=4><B><xtag-unisim-type-name>NGDBUILD_POST_UNISIM_SUMMARY</xtag-unisim-type-name></B></TD></TR><TR>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_BUFG</xtag-postunisim-param-name>=<xtag-postunisim-param-value>1</xtag-postunisim-param-value></TD>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_FD</xtag-postunisim-param-name>=<xtag-postunisim-param-value>4</xtag-postunisim-param-value></TD>
@@ -631,14 +653,18 @@ Help files</xtag-group-name></B></TD></TR>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_INV</xtag-postunisim-param-name>=<xtag-postunisim-param-value>7</xtag-postunisim-param-value></TD>
 </TR>
 <TR>
+<TD><xtag-postunisim-param-name>NGDBUILD_NUM_LD</xtag-postunisim-param-name>=<xtag-postunisim-param-value>5</xtag-postunisim-param-value></TD>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_LUT1</xtag-postunisim-param-name>=<xtag-postunisim-param-value>62</xtag-postunisim-param-value></TD>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_LUT2</xtag-postunisim-param-name>=<xtag-postunisim-param-value>5</xtag-postunisim-param-value></TD>
-<TD><xtag-postunisim-param-name>NGDBUILD_NUM_LUT4</xtag-postunisim-param-name>=<xtag-postunisim-param-value>16</xtag-postunisim-param-value></TD>
-<TD><xtag-postunisim-param-name>NGDBUILD_NUM_MUXCY</xtag-postunisim-param-name>=<xtag-postunisim-param-value>78</xtag-postunisim-param-value></TD>
+<TD><xtag-postunisim-param-name>NGDBUILD_NUM_LUT3</xtag-postunisim-param-name>=<xtag-postunisim-param-value>7</xtag-postunisim-param-value></TD>
 </TR>
 <TR>
+<TD><xtag-postunisim-param-name>NGDBUILD_NUM_LUT4</xtag-postunisim-param-name>=<xtag-postunisim-param-value>42</xtag-postunisim-param-value></TD>
+<TD><xtag-postunisim-param-name>NGDBUILD_NUM_MUXCY</xtag-postunisim-param-name>=<xtag-postunisim-param-value>78</xtag-postunisim-param-value></TD>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_OBUF</xtag-postunisim-param-name>=<xtag-postunisim-param-value>18</xtag-postunisim-param-value></TD>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_VCC</xtag-postunisim-param-name>=<xtag-postunisim-param-value>1</xtag-postunisim-param-value></TD>
+</TR>
+<TR>
 <TD><xtag-postunisim-param-name>NGDBUILD_NUM_XORCY</xtag-postunisim-param-name>=<xtag-postunisim-param-value>64</xtag-postunisim-param-value></TD>
 </xtag-section></TABLE>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 WIDTH='100%'>

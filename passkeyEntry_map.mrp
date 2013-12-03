@@ -9,22 +9,24 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Mon Dec 02 20:21:50 2013
+Mapped Date    : Mon Dec 02 20:33:18 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    4
+Number of warnings:    2
 Logic Utilization:
-  Number of Slice Flip Flops:            71 out of   9,312    1%
-  Number of 4 input LUTs:                23 out of   9,312    1%
+  Total Number Slice Registers:          76 out of   9,312    1%
+    Number used as Flip Flops:           71
+    Number used as Latches:               5
+  Number of 4 input LUTs:                56 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:             48 out of   4,656    1%
-    Number of Slices containing only related logic:      48 out of      48 100%
-    Number of Slices containing unrelated logic:          0 out of      48   0%
+  Number of occupied Slices:             66 out of   4,656    1%
+    Number of Slices containing only related logic:      66 out of      66 100%
+    Number of Slices containing unrelated logic:          0 out of      66   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          85 out of   9,312    1%
-    Number used as logic:                23
+  Total Number of 4 input LUTs:         118 out of   9,312    1%
+    Number used as logic:                56
     Number used as a route-thru:         62
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -33,11 +35,11 @@ Logic Distribution:
   Number of bonded IOBs:                 23 out of     232    9%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                2.21
+Average Fanout of Non-Clock Nets:                2.64
 
 Peak Memory Usage:  258 MB
-Total REAL time to MAP completion:  7 secs 
-Total CPU time to MAP completion:   4 secs 
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   5 secs 
 
 NOTES:
 
@@ -78,24 +80,15 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:PhysDesignRules:367 - The signal <ROWS<0>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ROWS<1>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ROWS<2>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <ROWS<3>_IBUF> is incomplete. The
-   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net d3/t_valid_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net d3/t_output_not0001 is
+   sourced by a combinatorial pin. This is not good design practice. Use the CE
+   pin to control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network ROWS<3>_IBUF has no load.
-INFO:LIT:395 - The above info message is repeated 3 more times for the following
-   (max. 5 shown):
-   ROWS<2>_IBUF,
-   ROWS<1>_IBUF,
-   ROWS<0>_IBUF
-   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
