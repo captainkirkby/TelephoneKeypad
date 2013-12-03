@@ -18,10 +18,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity keypadDecoder is
-    Port ( ROWS : in  STD_LOGIC_VECTOR (2 downto 0);
+    Port ( ROWS : in  STD_LOGIC_VECTOR (3 downto 0);
            CLK : in  STD_LOGIC;
-			  LEDS : OUT STD_LOGIC_VECTOR (2 downto 0);
-           COLUMNS : out  STD_LOGIC_VECTOR (3 downto 0);
+			  LEDS : out STD_LOGIC_VECTOR (2 downto 0);
+           COLUMNS : out  STD_LOGIC_VECTOR (2 downto 0);
            OUTPUT : out  STD_LOGIC_VECTOR (3 downto 0);
            VALID : out  STD_LOGIC);
 end keypadDecoder;
