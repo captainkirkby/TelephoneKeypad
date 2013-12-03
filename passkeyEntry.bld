@@ -27,10 +27,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 151876 kilobytes
+Total memory usage is 150916 kilobytes
 
 Writing NGD file "passkeyEntry.ngd" ...
-Total REAL time to NGDBUILD completion:  12 sec
-Total CPU time to NGDBUILD completion:   9 sec
+Total REAL time to NGDBUILD completion:  16 sec
+Total CPU time to NGDBUILD completion:   11 sec
 
 Writing NGDBUILD log file "passkeyEntry.bld"...

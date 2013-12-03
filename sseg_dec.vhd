@@ -93,8 +93,8 @@ begin
                "00011111" when digit = "0111"  else
                "00000001" when digit = "1000"  else
                "00001001" when digit = "1001"  else
-					--"11111101" when digit = "1110" else   -- dash
-					"11111111" when digit = "1110" else   -- blank instead of dash
+					"11111101" when digit = "1110" else   -- dash
+					--"11111111" when digit = "1110" else   -- blank instead of dash
 					"11111111" when digit = "1110" else   -- blank
                "11111111"; 
 

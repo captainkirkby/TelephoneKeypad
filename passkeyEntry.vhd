@@ -20,6 +20,7 @@ entity passkeyEntry is
     Port ( ROWS : in  STD_LOGIC_VECTOR (3 downto 0);
            CLK : in  STD_LOGIC;
 			  HIGH : out STD_LOGIC;
+			  DETECTEDLED : out STD_LOGIC;
            LEDS : out  STD_LOGIC_VECTOR (2 downto 0);
            COLUMNS : out  STD_LOGIC_VECTOR (2 downto 0);
            CATHODES : out  STD_LOGIC_VECTOR (7 downto 0);
@@ -53,6 +54,14 @@ component keypadDecoder is
            VALID : out  STD_LOGIC);
 end component;
 
+
+component SequenceDetectorFSM is
+    Port ( INPUT : in  STD_LOGIC_VECTOR(3 downto 0);
+           CLK : in  STD_LOGIC;
+           DETECTED : out  STD_LOGIC);
+end component;
+
+
 -- Intermediate Signal Declarations
 signal t8 : STD_LOGIC_VECTOR (7 downto 0);
 signal t4 : STD_LOGIC_VECTOR (3 downto 0);
@@ -76,6 +85,11 @@ d3: keypadDecoder PORT MAP(ROWS => ROWS,
 									COLUMNS => COLUMNS,
 									OUTPUT => t4,
 									VALID => t1);
+
+
+d4: SequenceDetectorFSM PORT MAP(INPUT => t4,
+                                 CLK => t2,
+											DETECTED => DETECTEDLED);
 
 t8 <= "0000" & t4;
 HIGH <= '1';

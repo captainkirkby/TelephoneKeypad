@@ -1,4 +1,5 @@
 vhdl work "K:\Final Project\sseg_dec.vhd"
 vhdl work "K:\Final Project\my_clk_div.vhd"
 vhdl work "K:\Final Project\keypadDecoder.vhd"
+vhdl work "K:\Final Project\FSM.vhd"
 vhdl work "K:\Final Project\passkeyEntry.vhd"

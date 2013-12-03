@@ -20,11 +20,14 @@ entity SequenceDetectorFSM is
            DETECTED : out  STD_LOGIC);
 end SequenceDetectorFSM;
 
-architecture Behavioral of FSM is
+architecture Behavioral of SequenceDetectorFSM is
 
-type state_type is (CHAR0,CHAR1,CHAR2,CHAR3);
+-- State Declarations
+type state_type is (IDLE,A,B,C,D);
 signal PS,NS : state_type;
 
+-- Intermediate Signal Declarations
+signal Correct : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
 
@@ -37,11 +40,35 @@ end process sync_proc;
 comb_proc: process(PS,INPUT)
 begin
 	case PS is
-		when CHAR0 =>
-		when CHAR1 =>
-		when CHAR2 =>
-		when CHAR3 =>
+		when IDLE => 
+		NS <= A;
+		
+		when A =>
+		if(INPUT = "0001") then Correct(0) <= '1';
+		end if;
+		NS <= B;
+		
+		when B =>
+		if(INPUT = "0010") then Correct(1) <= '1';
+		end if;
+		NS <= C;
+		
+		when C =>
+		if(INPUT = "0011") then Correct(2) <= '1';
+		end if;
+		NS <= D;
+		
+		when D =>
+		if(INPUT = "0100") then Correct(3) <= '1';
+		end if;
+      NS <= IDLE;		
+	end case;
+		
 end process comb_proc;
+
+DETECTED <= '1' when (Correct = "1111") else
+            '0';
+
 
 end Behavioral;
 

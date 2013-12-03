@@ -41,95 +41,67 @@ Data Sheet report:
 All values displayed in nanoseconds (ns)
 
 Clock ROWS<0> to Pad
-------------+------------+-------------------+--------+
-            | clk (edge) |                   | Clock  |
-Destination |   to PAD   |Internal Clock(s)  | Phase  |
-------------+------------+-------------------+--------+
-CATHODES<1> |   15.612(F)|d3/t_output_not0001|   0.000|
-            |   13.228(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<2> |   16.771(F)|d3/t_output_not0001|   0.000|
-            |   14.387(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<3> |   16.579(F)|d3/t_output_not0001|   0.000|
-            |   14.195(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<4> |   17.255(F)|d3/t_output_not0001|   0.000|
-            |   14.871(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<5> |   16.761(F)|d3/t_output_not0001|   0.000|
-            |   14.377(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<6> |   17.026(F)|d3/t_output_not0001|   0.000|
-            |   14.642(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<7> |   16.085(F)|d3/t_output_not0001|   0.000|
-            |   13.701(F)|d3/t_valid_or0000  |   0.000|
-------------+------------+-------------------+--------+
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+CATHODES<1> |   15.129(F)|d3/t_output_or0000|   0.000|
+CATHODES<2> |   15.758(F)|d3/t_output_or0000|   0.000|
+CATHODES<3> |   15.562(F)|d3/t_output_or0000|   0.000|
+CATHODES<4> |   16.063(F)|d3/t_output_or0000|   0.000|
+CATHODES<5> |   16.203(F)|d3/t_output_or0000|   0.000|
+CATHODES<6> |   15.826(F)|d3/t_output_or0000|   0.000|
+CATHODES<7> |   16.072(F)|d3/t_output_or0000|   0.000|
+------------+------------+------------------+--------+
 
 Clock ROWS<1> to Pad
-------------+------------+-------------------+--------+
-            | clk (edge) |                   | Clock  |
-Destination |   to PAD   |Internal Clock(s)  | Phase  |
-------------+------------+-------------------+--------+
-CATHODES<1> |   15.018(F)|d3/t_output_not0001|   0.000|
-            |   12.893(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<2> |   16.177(F)|d3/t_output_not0001|   0.000|
-            |   14.052(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<3> |   15.985(F)|d3/t_output_not0001|   0.000|
-            |   13.860(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<4> |   16.661(F)|d3/t_output_not0001|   0.000|
-            |   14.536(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<5> |   16.167(F)|d3/t_output_not0001|   0.000|
-            |   14.042(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<6> |   16.432(F)|d3/t_output_not0001|   0.000|
-            |   14.307(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<7> |   15.491(F)|d3/t_output_not0001|   0.000|
-            |   13.366(F)|d3/t_valid_or0000  |   0.000|
-------------+------------+-------------------+--------+
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+CATHODES<1> |   14.747(F)|d3/t_output_or0000|   0.000|
+CATHODES<2> |   15.376(F)|d3/t_output_or0000|   0.000|
+CATHODES<3> |   15.180(F)|d3/t_output_or0000|   0.000|
+CATHODES<4> |   15.681(F)|d3/t_output_or0000|   0.000|
+CATHODES<5> |   15.821(F)|d3/t_output_or0000|   0.000|
+CATHODES<6> |   15.444(F)|d3/t_output_or0000|   0.000|
+CATHODES<7> |   15.690(F)|d3/t_output_or0000|   0.000|
+------------+------------+------------------+--------+
 
 Clock ROWS<2> to Pad
-------------+------------+-------------------+--------+
-            | clk (edge) |                   | Clock  |
-Destination |   to PAD   |Internal Clock(s)  | Phase  |
-------------+------------+-------------------+--------+
-CATHODES<1> |   14.953(F)|d3/t_output_not0001|   0.000|
-            |   12.552(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<2> |   16.112(F)|d3/t_output_not0001|   0.000|
-            |   13.711(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<3> |   15.920(F)|d3/t_output_not0001|   0.000|
-            |   13.519(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<4> |   16.596(F)|d3/t_output_not0001|   0.000|
-            |   14.195(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<5> |   16.102(F)|d3/t_output_not0001|   0.000|
-            |   13.701(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<6> |   16.367(F)|d3/t_output_not0001|   0.000|
-            |   13.966(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<7> |   15.426(F)|d3/t_output_not0001|   0.000|
-            |   13.025(F)|d3/t_valid_or0000  |   0.000|
-------------+------------+-------------------+--------+
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+CATHODES<1> |   14.865(F)|d3/t_output_or0000|   0.000|
+CATHODES<2> |   15.494(F)|d3/t_output_or0000|   0.000|
+CATHODES<3> |   15.298(F)|d3/t_output_or0000|   0.000|
+CATHODES<4> |   15.799(F)|d3/t_output_or0000|   0.000|
+CATHODES<5> |   15.939(F)|d3/t_output_or0000|   0.000|
+CATHODES<6> |   15.562(F)|d3/t_output_or0000|   0.000|
+CATHODES<7> |   15.808(F)|d3/t_output_or0000|   0.000|
+------------+------------+------------------+--------+
 
 Clock ROWS<3> to Pad
-------------+------------+-------------------+--------+
-            | clk (edge) |                   | Clock  |
-Destination |   to PAD   |Internal Clock(s)  | Phase  |
-------------+------------+-------------------+--------+
-CATHODES<1> |   15.834(F)|d3/t_output_not0001|   0.000|
-            |   12.950(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<2> |   16.993(F)|d3/t_output_not0001|   0.000|
-            |   14.109(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<3> |   16.801(F)|d3/t_output_not0001|   0.000|
-            |   13.917(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<4> |   17.477(F)|d3/t_output_not0001|   0.000|
-            |   14.593(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<5> |   16.983(F)|d3/t_output_not0001|   0.000|
-            |   14.099(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<6> |   17.248(F)|d3/t_output_not0001|   0.000|
-            |   14.364(F)|d3/t_valid_or0000  |   0.000|
-CATHODES<7> |   16.307(F)|d3/t_output_not0001|   0.000|
-            |   13.423(F)|d3/t_valid_or0000  |   0.000|
-------------+------------+-------------------+--------+
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+CATHODES<1> |   15.299(F)|d3/t_output_or0000|   0.000|
+CATHODES<2> |   15.928(F)|d3/t_output_or0000|   0.000|
+CATHODES<3> |   15.732(F)|d3/t_output_or0000|   0.000|
+CATHODES<4> |   16.233(F)|d3/t_output_or0000|   0.000|
+CATHODES<5> |   16.373(F)|d3/t_output_or0000|   0.000|
+CATHODES<6> |   15.996(F)|d3/t_output_or0000|   0.000|
+CATHODES<7> |   16.242(F)|d3/t_output_or0000|   0.000|
+------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.606|         |         |         |
+CLK            |    5.313|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ROWS<0>
@@ -137,10 +109,10 @@ Clock to Setup on destination clock ROWS<0>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ROWS<0>        |         |         |    1.330|    1.330|
-ROWS<1>        |         |         |    1.147|    1.147|
-ROWS<2>        |         |         |    0.919|    0.919|
-ROWS<3>        |         |         |    1.738|    1.738|
+ROWS<0>        |         |         |    0.573|    0.573|
+ROWS<1>        |         |         |    0.043|    0.043|
+ROWS<2>        |         |         |    0.395|    0.395|
+ROWS<3>        |         |         |    1.691|    1.691|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ROWS<1>
@@ -148,10 +120,10 @@ Clock to Setup on destination clock ROWS<1>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ROWS<0>        |         |         |    1.806|    1.806|
-ROWS<1>        |         |         |    1.623|    1.623|
-ROWS<2>        |         |         |    1.395|    1.395|
-ROWS<3>        |         |         |    2.214|    2.214|
+ROWS<0>        |         |         |    0.878|    0.878|
+ROWS<1>        |         |         |    0.348|    0.348|
+ROWS<2>        |         |         |    0.700|    0.700|
+ROWS<3>        |         |         |    1.996|    1.996|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ROWS<2>
@@ -159,10 +131,10 @@ Clock to Setup on destination clock ROWS<2>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ROWS<0>        |         |         |    1.858|    1.858|
-ROWS<1>        |         |         |    1.675|    1.675|
-ROWS<2>        |         |         |    1.447|    1.447|
-ROWS<3>        |         |         |    2.266|    2.266|
+ROWS<0>        |         |         |    0.784|    0.784|
+ROWS<1>        |         |         |    0.254|    0.254|
+ROWS<2>        |         |         |    0.606|    0.606|
+ROWS<3>        |         |         |    1.902|    1.902|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ROWS<3>
@@ -170,21 +142,21 @@ Clock to Setup on destination clock ROWS<3>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ROWS<0>        |         |         |    1.153|    1.153|
-ROWS<1>        |         |         |    0.970|    0.970|
-ROWS<2>        |         |         |    0.742|    0.742|
-ROWS<3>        |         |         |    1.561|    1.561|
+ROWS<0>        |         |         |    0.436|    0.436|
+ROWS<1>        |         |         |   -0.094|   -0.094|
+ROWS<2>        |         |         |    0.258|    0.258|
+ROWS<3>        |         |         |    1.554|    1.554|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Dec 02 21:32:20 2013 
+Analysis completed Tue Dec 03 14:31:09 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 164 MB
+Peak Memory Usage: 163 MB
 
 
 

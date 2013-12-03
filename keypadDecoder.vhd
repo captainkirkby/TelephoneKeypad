@@ -33,15 +33,71 @@ type state_type is (COL0, COL1, COL2);
 signal PS, NS : state_type;
 
 -- Intermediate Signal Declarations
-signal t_output : STD_LOGIC_VECTOR (3 downto 0) := "0000";
-signal t_valid : STD_LOGIC := '0';
--- signal t_valid : STD_LOGIC;
+signal t_output : STD_LOGIC_VECTOR (3 downto 0);
+signal t_valid : STD_LOGIC;
 
 
 begin
 
 OUTPUT <= t_output;
 VALID <= t_valid;
+
+det_proc: process(PS, ROWS)
+begin
+			-- 1 pressed
+			if(ROWS = "1110" AND PS=COL0) then
+				t_valid <= '1';
+				t_output <= "0001";
+			-- 4 pressed
+			elsif(ROWS = "1101" AND PS=COL0) then
+				t_valid <= '1';
+				t_output <= "0100";
+			-- 7 pressed
+			elsif(ROWS = "1011" AND PS=COL0) then
+				t_valid <= '1';
+				t_output <= "0111";
+			-- * pressed
+			elsif(ROWS = "0111" AND PS=COL0) then
+				t_valid <= '1';
+				t_output <= "1010";
+				
+				
+			-- 2 pressed
+			elsif(ROWS = "1110" AND PS=COL1) then
+				t_valid <= '1';
+				t_output <= "0010";
+			-- 5 pressed
+			elsif(ROWS = "1101" AND PS=COL1) then
+				t_valid <= '1';
+				t_output <= "0101";
+			-- 8 pressed
+			elsif(ROWS = "1011" AND PS=COL1) then
+				t_valid <= '1';
+				t_output <= "1000";
+			-- 0 pressed
+			elsif(ROWS = "0111" AND PS=COL1) then
+				t_valid <= '1';
+				t_output <= "0000";
+				
+			-- 3 pressed
+			elsif(ROWS = "1110" AND PS=COL2) then
+				t_valid <= '1';
+				t_output <= "0011";
+			-- 6 pressed
+			elsif(ROWS = "1101" AND PS=COL2) then
+				t_valid <= '1';
+				t_output <= "0110";
+			-- 9 pressed
+			elsif(ROWS = "1011" AND PS=COL2) then
+				t_valid <= '1';
+				t_output <= "1001";
+			-- # pressed
+			elsif(ROWS = "0111" AND PS=COL2) then
+				t_valid <= '1';
+				t_output <= "1011";
+			end if;
+
+end process det_proc;
 
 -- Sequential Process
 seq_proc: process(CLK)
@@ -62,27 +118,27 @@ begin
 			COLUMNS <= "110";
 			LEDS <= "001";
 			
-			-- 1 pressed
-			if(ROWS = "1110") then
-				t_valid <= '1';
-				t_output <= "0001";
-			-- 4 pressed
-			elsif(ROWS = "1101") then
-				t_valid <= '1';
-				t_output <= "0100";
-			-- 7 pressed
-			elsif(ROWS = "1011") then
-				t_valid <= '1';
-				t_output <= "0111";
-			-- * pressed
-			elsif(ROWS = "0111") then
-				t_valid <= '1';
-				t_output <= "1010";
-			-- Nothing pressed
---			elsif(ROWS = "1111") then
---				t_valid <= '0';
---				t_output <= "1111";
-			end if;
+--			-- 1 pressed
+--			if(ROWS = "1110") then
+--				t_valid <= '1';
+--				t_output <= "0001";
+--			-- 4 pressed
+--			elsif(ROWS = "1101") then
+--				t_valid <= '1';
+--				t_output <= "0100";
+--			-- 7 pressed
+--			elsif(ROWS = "1011") then
+--				t_valid <= '1';
+--				t_output <= "0111";
+--			-- * pressed
+--			elsif(ROWS = "0111") then
+--				t_valid <= '1';
+--				t_output <= "1010";
+--			-- Nothing pressed
+----			elsif(ROWS = "1111") then
+----				t_valid <= '0';
+----				t_output <= "1111";
+--			end if;
 
 		when COL1 =>
 			NS <= COL2;
@@ -90,27 +146,27 @@ begin
 			COLUMNS <= "101";
 			LEDS <= "010";
 			
-			-- 2 pressed
-			if(ROWS = "1110") then
-				t_valid <= '1';
-				t_output <= "0010";
-			-- 5 pressed
-			elsif(ROWS = "1101") then
-				t_valid <= '1';
-				t_output <= "0101";
-			-- 8 pressed
-			elsif(ROWS = "1011") then
-				t_valid <= '1';
-				t_output <= "1000";
-			-- 0 pressed
-			elsif(ROWS = "0111") then
-				t_valid <= '1';
-				t_output <= "0000";
-			-- Nothing pressed
---			elsif(ROWS = "1111") then
---				t_valid <= '0';
---				t_output <= "1111";
-			end if;
+--			-- 2 pressed
+--			if(ROWS = "1110") then
+--				t_valid <= '1';
+--				t_output <= "0010";
+--			-- 5 pressed
+--			elsif(ROWS = "1101") then
+--				t_valid <= '1';
+--				t_output <= "0101";
+--			-- 8 pressed
+--			elsif(ROWS = "1011") then
+--				t_valid <= '1';
+--				t_output <= "1000";
+--			-- 0 pressed
+--			elsif(ROWS = "0111") then
+--				t_valid <= '1';
+--				t_output <= "0000";
+--			-- Nothing pressed
+----			elsif(ROWS = "1111") then
+----				t_valid <= '0';
+----				t_output <= "1111";
+--			end if;
 
 		when COL2 =>
 			NS <= COL0;
@@ -118,27 +174,27 @@ begin
 			COLUMNS <= "011";
 			LEDS <= "100";
 			
-			-- 3 pressed
-			if(ROWS = "1110") then
-				t_valid <= '1';
-				t_output <= "0011";
-			-- 6 pressed
-			elsif(ROWS = "1101") then
-				t_valid <= '1';
-				t_output <= "0110";
-			-- 9 pressed
-			elsif(ROWS = "1011") then
-				t_valid <= '1';
-				t_output <= "1001";
-			-- # pressed
-			elsif(ROWS = "0111") then
-				t_valid <= '1';
-				t_output <= "1011";
-			-- Nothing pressed
---			elsif(ROWS = "1111") then
---				t_valid <= '0';
---				t_output <= "1111";
-			end if;
+--			-- 3 pressed
+--			if(ROWS = "1110") then
+--				t_valid <= '1';
+--				t_output <= "0011";
+--			-- 6 pressed
+--			elsif(ROWS = "1101") then
+--				t_valid <= '1';
+--				t_output <= "0110";
+--			-- 9 pressed
+--			elsif(ROWS = "1011") then
+--				t_valid <= '1';
+--				t_output <= "1001";
+--			-- # pressed
+--			elsif(ROWS = "0111") then
+--				t_valid <= '1';
+--				t_output <= "1011";
+--			-- Nothing pressed
+----			elsif(ROWS = "1111") then
+----				t_valid <= '0';
+----				t_output <= "1111";
+--			end if;
 
 	end case;
 end process comb_proc;
