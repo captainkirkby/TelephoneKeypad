@@ -17,7 +17,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project ID (random number)</B></TD>
-<TD><xtag-property name="RandomID">fb9fb9426ce0489892da91d5b7f2f4f1</xtag-property>.<xtag-property name="ProjectID">E281CFD5DCA74C369B1DB1D6D44D334F</xtag-property>.<xtag-property name="ProjectIteration">1</xtag-property></TD>
+<TD><xtag-property name="RandomID">fb9fb9426ce0489892da91d5b7f2f4f1</xtag-property>.<xtag-property name="ProjectID">E281CFD5DCA74C369B1DB1D6D44D334F</xtag-property>.<xtag-property name="ProjectIteration">3</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Target Package:</B></TD>
 <TD><xtag-property name="TargetPackage">fg320</xtag-property></TD>
 </TR>
@@ -29,7 +29,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Date Generated</B></TD>
-<TD><xtag-property name="Date Generated">2013-12-02T19:43:09</xtag-property></TD>
+<TD><xtag-property name="Date Generated">2013-12-02T20:23:25</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Tool Flow</B></TD>
 <TD><xtag-property name="ToolFlow">ISE</xtag-property></TD>
 </TR>
@@ -120,21 +120,21 @@
 <LI><xtag-item1>NumNets_Vcc=1</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_CLKPIN=38</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_CNTRLPIN=35</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_DOUBLE=119</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_DOUBLE=130</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_DUMMY=139</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_DUMMYESC=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_GLOBAL=13</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_HFULLHEX=2</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_GLOBAL=11</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_HFULLHEX=5</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_HLONG=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_HUNIHEX=4</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_HUNIHEX=1</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_INPUT=190</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_IOBOUTPUT=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_OMUX=146</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_OMUX=139</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_OUTPUT=116</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_PREBXBY=22</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_VFULLHEX=7</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_VLONG=3</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_VUNIHEX=15</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_PREBXBY=19</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_VFULLHEX=6</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_VLONG=2</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_VUNIHEX=10</xtag-item1></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="SiteStatistics">SiteStatistics</xtag-group-name>
@@ -142,9 +142,9 @@
 <LI><xtag-item1>IBUF-DIFFM=1</xtag-item1></LI>
 <LI><xtag-item1>IBUF-DIFFMI=1</xtag-item1></LI>
 <LI><xtag-item1>IBUF-DIFFS=3</xtag-item1></LI>
-<LI><xtag-item1>IOB-DIFFM=10</xtag-item1></LI>
-<LI><xtag-item1>IOB-DIFFS=5</xtag-item1></LI>
-<LI><xtag-item1>SLICEL-SLICEM=2</xtag-item1></LI>
+<LI><xtag-item1>IOB-DIFFM=11</xtag-item1></LI>
+<LI><xtag-item1>IOB-DIFFS=4</xtag-item1></LI>
+<LI><xtag-item1>SLICEL-SLICEM=4</xtag-item1></LI>
 </UL>
 </xtag-group>
 </TD>
@@ -459,6 +459,17 @@
 <LI><xtag-cmdline>par -w -intstyle ise -ol high -t 1 &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
 <LI><xtag-cmdline>trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
 <LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc &lt;fname&gt;.ucf -p xc3s500e-fg320-4 &lt;ise_file&gt; &lt;fname&gt;.ngd</xtag-cmdline></LI>
+<LI><xtag-cmdline>map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o &lt;fname&gt;.ncd &lt;fname&gt;.ngd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>par -w -intstyle ise -ol high -t 1 &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>xst -intstyle ise -ifn &lt;ise_file&gt;</xtag-cmdline></LI>
+<LI><xtag-cmdline>ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc &lt;fname&gt;.ucf -p xc3s500e-fg320-4 &lt;ise_file&gt; &lt;fname&gt;.ngd</xtag-cmdline></LI>
+<LI><xtag-cmdline>map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o &lt;fname&gt;.ncd &lt;fname&gt;.ngd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>par -w -intstyle ise -ol high -t 1 &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
 <LI><xtag-cmdline>fuse</xtag-cmdline></LI>
 </xtag-section></UL></TD></TR>
 </TABLE>
@@ -466,8 +477,8 @@
 
 <tr>
   <td><xtag-program-name>bitgen</xtag-program-name></td>
-  <td><xtag-total-run-started>83</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>83</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>85</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>85</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -476,8 +487,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>map</xtag-program-name></td>
-  <td><xtag-total-run-started>102</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>100</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>104</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>102</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -486,8 +497,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>ngdbuild</xtag-program-name></td>
-  <td><xtag-total-run-started>109</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>108</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>111</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>110</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -496,8 +507,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>par</xtag-program-name></td>
-  <td><xtag-total-run-started>100</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>97</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>102</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>99</xtag-total-run-finished></td>
   <td><xtag-total-error>2</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -506,8 +517,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>trce</xtag-program-name></td>
-  <td><xtag-total-run-started>97</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>97</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>99</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>99</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -516,8 +527,8 @@
 </tr>
 <tr>
   <td><xtag-program-name>xst</xtag-program-name></td>
-  <td><xtag-total-run-started>199</xtag-total-run-started></td>
-  <td><xtag-total-run-finished>195</xtag-total-run-finished></td>
+  <td><xtag-total-run-started>200</xtag-total-run-started></td>
+  <td><xtag-total-run-finished>196</xtag-total-run-finished></td>
   <td><xtag-total-error>0</xtag-total-error></td>
   <td><xtag-total-fatal-error>0</xtag-total-fatal-error></td>
   <td><xtag-total-internal-error>0</xtag-total-internal-error></td>
@@ -561,7 +572,7 @@ Help files</xtag-group-name></B></TD></TR>
 <TD><xtag-design-property-name>PROP_intProjectCreationTimestamp</xtag-design-property-name>=<xtag-design-property-value>2013-12-02T18:24:34</xtag-design-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWbtProjectID</xtag-design-property-name>=<xtag-design-property-value>E281CFD5DCA74C369B1DB1D6D44D334F</xtag-design-property-value></TD>
-<TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>1</xtag-process-property-value></TD>
+<TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>3</xtag-process-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWorkingDirLocWRTProjDir</xtag-design-property-name>=<xtag-design-property-value>Same</xtag-design-property-value></TD>
 <TD><xtag-design-property-name>PROP_intWorkingDirUsed</xtag-design-property-name>=<xtag-design-property-value>No</xtag-design-property-value></TD>

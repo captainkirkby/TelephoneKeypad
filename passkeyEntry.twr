@@ -45,18 +45,18 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.596|         |         |         |
+CLK            |    5.619|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Mon Dec 02 19:42:40 2013 
+Analysis completed Mon Dec 02 20:22:58 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 162 MB
+Peak Memory Usage: 163 MB
 
 
 

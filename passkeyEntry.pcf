@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Mon Dec 02 19:41:19 2013
+// Written by: Map P.68d on Mon Dec 02 20:21:55 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -16,9 +16,11 @@ COMP "ROWS<1>" LOCATE = SITE "K12" LEVEL 1;
 COMP "LEDS<0>" LOCATE = SITE "E17" LEVEL 1;
 COMP "ROWS<2>" LOCATE = SITE "L17" LEVEL 1;
 COMP "LEDS<1>" LOCATE = SITE "P15" LEVEL 1;
-COMP "COLUMNS<0>" LOCATE = SITE "M14" LEVEL 1;
+COMP "COLUMNS<0>" LOCATE = SITE "K13" LEVEL 1;
 COMP "ROWS<3>" LOCATE = SITE "M15" LEVEL 1;
 COMP "LEDS<2>" LOCATE = SITE "F4" LEVEL 1;
+COMP "COLUMNS<1>" LOCATE = SITE "L16" LEVEL 1;
+COMP "COLUMNS<2>" LOCATE = SITE "M14" LEVEL 1;
 COMP "ANODES<0>" LOCATE = SITE "F15" LEVEL 1;
 COMP "ANODES<1>" LOCATE = SITE "C18" LEVEL 1;
 COMP "ANODES<2>" LOCATE = SITE "H17" LEVEL 1;

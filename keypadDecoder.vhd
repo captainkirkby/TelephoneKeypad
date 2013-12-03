@@ -57,8 +57,8 @@ begin
 		when COL0 => 
 			NS <= COL1;
 			-- Column 0 is low
-			COLUMNS <= "011";
-			LEDS <= "100";
+			COLUMNS <= "110";
+			LEDS <= "001";
 
 		when COL1 =>
 			NS <= COL2;
@@ -69,8 +69,8 @@ begin
 		when COL2 =>
 			NS <= COL0;
 			-- Column 2 is low
-			COLUMNS <= "110";
-			LEDS <= "001";
+			COLUMNS <= "011";
+			LEDS <= "100";
 
 	end case;
 end process comb_proc;

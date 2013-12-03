@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.56 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.36 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.56 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.37 secs
  
 --> Reading design: passkeyEntry.prj
 
@@ -111,7 +111,8 @@ Architecture my_clk_div of Entity clk_div is up to date.
 Compiling vhdl file "K:/Final Project/my_clk_div.vhd" in Library work.
 Architecture my_clk_div of Entity my_clk_div is up to date.
 Compiling vhdl file "K:/Final Project/keypadDecoder.vhd" in Library work.
-Architecture behavioral of Entity keypaddecoder is up to date.
+Entity <keypaddecoder> compiled.
+Entity <keypaddecoder> (Architecture <behavioral>) compiled.
 Compiling vhdl file "K:/Final Project/passkeyEntry.vhd" in Library work.
 Architecture behavioral of Entity passkeyentry is up to date.
 
@@ -582,15 +583,15 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'd2/tmp_clk'
   Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
 Offset:              5.518ns (Levels of Logic = 2)
-  Source:            d3/PS_FSM_FFd3 (FF)
+  Source:            d3/PS_FSM_FFd1 (FF)
   Destination:       COLUMNS<2> (PAD)
   Source Clock:      d2/tmp_clk rising
 
-  Data Path: d3/PS_FSM_FFd3 to COLUMNS<2>
+  Data Path: d3/PS_FSM_FFd1 to COLUMNS<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.591   0.531  d3/PS_FSM_FFd3 (d3/PS_FSM_FFd3)
+     FD:C->Q               3   0.591   0.531  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
      INV:I->O              1   0.704   0.420  d3/PS_FSM_Out31_INV_0 (COLUMNS_2_OBUF)
      OBUF:I->O                 3.272          COLUMNS_2_OBUF (COLUMNS<2>)
     ----------------------------------------
@@ -600,12 +601,12 @@ Offset:              5.518ns (Levels of Logic = 2)
 =========================================================================
 
 
-Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 25.74 secs
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 22.92 secs
  
 --> 
 
-Total memory usage is 261104 kilobytes
+Total memory usage is 261616 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)
