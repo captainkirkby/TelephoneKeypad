@@ -29,7 +29,7 @@ end keypadDecoder;
 architecture Behavioral of keypadDecoder is
 
 -- State Declarations
-type state_type is (COL0, COL2, COL3);
+type state_type is (COL0, COL1, COL2);
 signal PS, NS : state_type;
 
 -- Intermediate Signal Declarations
