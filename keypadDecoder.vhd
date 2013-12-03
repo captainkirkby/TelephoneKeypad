@@ -33,7 +33,7 @@ type state_type is (COL0, COL1, COL2);
 signal PS, NS : state_type;
 
 -- Intermediate Signal Declarations
-signal t_output : STD_LOGIC_VECTOR (3 downto 0) := "00000000";
+signal t_output : STD_LOGIC_VECTOR (3 downto 0) := "0000";
 signal t_valid : STD_LOGIC := '0';
 
 begin
@@ -47,7 +47,7 @@ begin
 	if(rising_edge(CLK)) then
 		PS <= NS;
 	end if;
-end process seq_process;
+end process seq_proc;
 
 -- Combinatorial Process
 comb_proc: process(PS, ROWS)
@@ -55,16 +55,19 @@ begin
 
 	case PS is
 		when COL0 => 
+			NS <= COL1;
 			-- Column 0 is low
 			COLUMNS <= "011";
 			LEDS <= "100";
 
 		when COL1 =>
+			NS <= COL2;
 			-- Column 1 is low
 			COLUMNS <= "101";
 			LEDS <= "010";
 
 		when COL2 =>
+			NS <= COL0;
 			-- Column 2 is low
 			COLUMNS <= "110";
 			LEDS <= "001";
