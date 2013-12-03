@@ -9,7 +9,7 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Mon Dec 02 21:04:52 2013
+Mapped Date    : Mon Dec 02 21:30:58 2013
 
 Mapping design into LUTs...
 Running directed packing...
@@ -46,13 +46,13 @@ Logic Distribution:
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 23 out of     232    9%
+  Number of bonded IOBs:                 24 out of     232   10%
   Number of BUFGMUXs:                     1 out of      24    4%
 
 Average Fanout of Non-Clock Nets:                2.67
 
 Peak Memory Usage:  258 MB
-Total REAL time to MAP completion:  10 secs 
+Total REAL time to MAP completion:  9 secs 
 Total CPU time to MAP completion:   5 secs 
 
 NOTES:

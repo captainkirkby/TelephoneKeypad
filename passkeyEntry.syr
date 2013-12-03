@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.47 secs
+Total CPU time to Xst completion: 0.59 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.47 secs
+Total CPU time to Xst completion: 0.61 secs
  
 --> Reading design: passkeyEntry.prj
 
@@ -105,18 +105,16 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "K:/Final Project/sseg_dec.vhd" in Library work.
-Entity <sseg_dec> compiled.
-Entity <sseg_dec> (Architecture <my_sseg>) compiled.
-Entity <bin2bcdconv> compiled.
-Entity <bin2bcdconv> (Architecture <my_ckt>) compiled.
-Entity <clk_div> compiled.
-Entity <clk_div> (Architecture <my_clk_div>) compiled.
+Architecture my_sseg of Entity sseg_dec is up to date.
+Architecture my_ckt of Entity bin2bcdconv is up to date.
+Architecture my_clk_div of Entity clk_div is up to date.
 Compiling vhdl file "K:/Final Project/my_clk_div.vhd" in Library work.
 Architecture my_clk_div of Entity my_clk_div is up to date.
 Compiling vhdl file "K:/Final Project/keypadDecoder.vhd" in Library work.
 Architecture behavioral of Entity keypaddecoder is up to date.
 Compiling vhdl file "K:/Final Project/passkeyEntry.vhd" in Library work.
-Architecture behavioral of Entity passkeyentry is up to date.
+Entity <passkeyentry> compiled.
+Entity <passkeyentry> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -414,7 +412,7 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 23
+# IOs                              : 24
 
 Cell Usage :
 # BELS                             : 271
@@ -435,9 +433,9 @@ Cell Usage :
 #      LD                          : 5
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 22
+# IO Buffers                       : 23
 #      IBUF                        : 4
-#      OBUF                        : 18
+#      OBUF                        : 19
 =========================================================================
 
 Device utilization summary:
@@ -448,8 +446,8 @@ Selected Device : 3s500efg320-4
  Number of Slices:                       63  out of   4656     1%  
  Number of Slice Flip Flops:             76  out of   9312     0%  
  Number of 4 input LUTs:                125  out of   9312     1%  
- Number of IOs:                          23
- Number of bonded IOBs:                  23  out of    232     9%  
+ Number of IOs:                          24
+ Number of bonded IOBs:                  24  out of    232    10%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -706,12 +704,12 @@ Offset:              8.551ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 29.00 secs
-Total CPU time to Xst completion: 28.19 secs
+Total REAL time to Xst completion: 25.00 secs
+Total CPU time to Xst completion: 25.05 secs
  
 --> 
 
-Total memory usage is 264240 kilobytes
+Total memory usage is 263088 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

@@ -19,6 +19,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity passkeyEntry is
     Port ( ROWS : in  STD_LOGIC_VECTOR (3 downto 0);
            CLK : in  STD_LOGIC;
+			  HIGH : out STD_LOGIC;
            LEDS : out  STD_LOGIC_VECTOR (2 downto 0);
            COLUMNS : out  STD_LOGIC_VECTOR (2 downto 0);
            CATHODES : out  STD_LOGIC_VECTOR (7 downto 0);
@@ -77,6 +78,7 @@ d3: keypadDecoder PORT MAP(ROWS => ROWS,
 									VALID => t1);
 
 t8 <= "0000" & t4;
+HIGH <= '1';
 
 end Behavioral;
 

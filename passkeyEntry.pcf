@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Mon Dec 02 21:04:59 2013
+// Written by: Map P.68d on Mon Dec 02 21:31:06 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -24,6 +24,7 @@ COMP "COLUMNS<2>" LOCATE = SITE "M14" LEVEL 1;
 COMP "ANODES<0>" LOCATE = SITE "F15" LEVEL 1;
 COMP "ANODES<1>" LOCATE = SITE "C18" LEVEL 1;
 COMP "ANODES<2>" LOCATE = SITE "H17" LEVEL 1;
+COMP "HIGH" LOCATE = SITE "M16" LEVEL 1;
 COMP "ANODES<3>" LOCATE = SITE "F17" LEVEL 1;
 COMP "CLK" LOCATE = SITE "B8" LEVEL 1;
 NET "CLK_BUFGP/IBUFG" BEL "CLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
