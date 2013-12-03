@@ -35,6 +35,8 @@ signal PS, NS : state_type;
 -- Intermediate Signal Declarations
 signal t_output : STD_LOGIC_VECTOR (3 downto 0) := "0000";
 signal t_valid : STD_LOGIC := '0';
+-- signal t_valid : STD_LOGIC;
+
 
 begin
 
@@ -77,9 +79,9 @@ begin
 				t_valid <= '1';
 				t_output <= "1010";
 			-- Nothing pressed
-			elsif(ROWS = "1111") then
-				t_valid <= '0';
-				t_output <= "1111";
+--			elsif(ROWS = "1111") then
+--				t_valid <= '0';
+--				t_output <= "1111";
 			end if;
 
 		when COL1 =>
@@ -105,9 +107,9 @@ begin
 				t_valid <= '1';
 				t_output <= "0000";
 			-- Nothing pressed
-			elsif(ROWS = "1111") then
-				t_valid <= '0';
-				t_output <= "1111";
+--			elsif(ROWS = "1111") then
+--				t_valid <= '0';
+--				t_output <= "1111";
 			end if;
 
 		when COL2 =>
@@ -133,9 +135,9 @@ begin
 				t_valid <= '1';
 				t_output <= "1011";
 			-- Nothing pressed
-			elsif(ROWS = "1111") then
-				t_valid <= '0';
-				t_output <= "1111";
+--			elsif(ROWS = "1111") then
+--				t_valid <= '0';
+--				t_output <= "1111";
 			end if;
 
 	end case;

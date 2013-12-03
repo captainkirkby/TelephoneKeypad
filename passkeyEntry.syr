@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.91 secs
+Total CPU time to Xst completion: 0.47 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.92 secs
+Total CPU time to Xst completion: 0.47 secs
  
 --> Reading design: passkeyEntry.prj
 
@@ -105,14 +105,16 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "K:/Final Project/sseg_dec.vhd" in Library work.
-Architecture my_sseg of Entity sseg_dec is up to date.
-Architecture my_ckt of Entity bin2bcdconv is up to date.
-Architecture my_clk_div of Entity clk_div is up to date.
+Entity <sseg_dec> compiled.
+Entity <sseg_dec> (Architecture <my_sseg>) compiled.
+Entity <bin2bcdconv> compiled.
+Entity <bin2bcdconv> (Architecture <my_ckt>) compiled.
+Entity <clk_div> compiled.
+Entity <clk_div> (Architecture <my_clk_div>) compiled.
 Compiling vhdl file "K:/Final Project/my_clk_div.vhd" in Library work.
 Architecture my_clk_div of Entity my_clk_div is up to date.
 Compiling vhdl file "K:/Final Project/keypadDecoder.vhd" in Library work.
-Entity <keypaddecoder> compiled.
-Entity <keypaddecoder> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity keypaddecoder is up to date.
 Compiling vhdl file "K:/Final Project/passkeyEntry.vhd" in Library work.
 Architecture behavioral of Entity passkeyentry is up to date.
 
@@ -139,8 +141,8 @@ Analyzing Entity <passkeyEntry> in library <work> (Architecture <behavioral>).
 Entity <passkeyEntry> analyzed. Unit <passkeyEntry> generated.
 
 Analyzing Entity <sseg_dec> in library <work> (Architecture <my_sseg>).
-INFO:Xst:1561 - "K:/Final Project/sseg_dec.vhd" line 128: Mux is complete : default of case is discarded
-INFO:Xst:1561 - "K:/Final Project/sseg_dec.vhd" line 136: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "K:/Final Project/sseg_dec.vhd" line 129: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "K:/Final Project/sseg_dec.vhd" line 137: Mux is complete : default of case is discarded
 Entity <sseg_dec> analyzed. Unit <sseg_dec> generated.
 
 Analyzing Entity <bin2bcdconv> in library <work> (Architecture <my_ckt>).
@@ -199,70 +201,70 @@ Synthesizing Unit <bin2bcdconv>.
     Using one-hot encoding for signal <msd$mux0000>.
     Using one-hot encoding for signal <mmsd$mux0000>.
     Found 16x4-bit ROM for signal <LSD_OUT>.
-    Found 8-bit adder for signal <cnt_tot$addsub0000> created at line 177.
-    Found 8-bit adder for signal <cnt_tot$addsub0001> created at line 178.
-    Found 8-bit adder for signal <cnt_tot$addsub0002> created at line 179.
-    Found 8-bit adder for signal <cnt_tot$addsub0003> created at line 180.
-    Found 8-bit adder for signal <cnt_tot$addsub0004> created at line 181.
-    Found 8-bit adder for signal <cnt_tot$addsub0005> created at line 182.
-    Found 8-bit adder for signal <cnt_tot$addsub0006> created at line 183.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0007> created at line 194.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0008> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0009> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0010> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0011> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0012> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0013> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0014> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0015> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0016> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0017> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0018> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0019> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0020> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0021> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0022> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0023> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0024> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0025> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0026> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0027> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0028> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$addsub0029> created at line 201.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0000> created at line 191.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0001> created at line 194.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0002> created at line 198.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0003> created at line 201.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0004> created at line 201.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0005> created at line 201.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0006> created at line 201.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0007> created at line 201.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0008> created at line 201.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0009> created at line 201.
-    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0010> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$sub0000> created at line 194.
-    Found 8-bit subtractor for signal <cnt_tot$sub0008> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$sub0015> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$sub0021> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$sub0026> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$sub0030> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$sub0033> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$sub0035> created at line 201.
-    Found 8-bit subtractor for signal <cnt_tot$sub0036> created at line 201.
-    Found 8-bit subtractor for signal <msd$addsub0000> created at line 201.
-    Found 8-bit subtractor for signal <msd$addsub0001> created at line 201.
-    Found 8-bit subtractor for signal <msd$addsub0002> created at line 201.
-    Found 8-bit subtractor for signal <msd$addsub0003> created at line 201.
-    Found 8-bit subtractor for signal <msd$addsub0004> created at line 201.
-    Found 8-bit subtractor for signal <msd$addsub0005> created at line 201.
-    Found 8-bit subtractor for signal <msd$addsub0006> created at line 201.
-    Found 8-bit comparator less for signal <msd$cmp_lt0000> created at line 201.
-    Found 8-bit comparator less for signal <msd$cmp_lt0001> created at line 201.
-    Found 8-bit comparator less for signal <msd$cmp_lt0002> created at line 201.
-    Found 8-bit comparator less for signal <msd$cmp_lt0003> created at line 201.
-    Found 8-bit comparator less for signal <msd$cmp_lt0004> created at line 201.
-    Found 8-bit comparator less for signal <msd$cmp_lt0005> created at line 201.
-    Found 8-bit comparator less for signal <msd$cmp_lt0006> created at line 201.
+    Found 8-bit adder for signal <cnt_tot$addsub0000> created at line 178.
+    Found 8-bit adder for signal <cnt_tot$addsub0001> created at line 179.
+    Found 8-bit adder for signal <cnt_tot$addsub0002> created at line 180.
+    Found 8-bit adder for signal <cnt_tot$addsub0003> created at line 181.
+    Found 8-bit adder for signal <cnt_tot$addsub0004> created at line 182.
+    Found 8-bit adder for signal <cnt_tot$addsub0005> created at line 183.
+    Found 8-bit adder for signal <cnt_tot$addsub0006> created at line 184.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0007> created at line 195.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0008> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0009> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0010> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0011> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0012> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0013> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0014> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0015> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0016> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0017> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0018> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0019> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0020> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0021> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0022> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0023> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0024> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0025> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0026> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0027> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0028> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0029> created at line 202.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0000> created at line 192.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0001> created at line 195.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0002> created at line 199.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0003> created at line 202.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0004> created at line 202.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0005> created at line 202.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0006> created at line 202.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0007> created at line 202.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0008> created at line 202.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0009> created at line 202.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0010> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$sub0000> created at line 195.
+    Found 8-bit subtractor for signal <cnt_tot$sub0008> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$sub0015> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$sub0021> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$sub0026> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$sub0030> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$sub0033> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$sub0035> created at line 202.
+    Found 8-bit subtractor for signal <cnt_tot$sub0036> created at line 202.
+    Found 8-bit subtractor for signal <msd$addsub0000> created at line 202.
+    Found 8-bit subtractor for signal <msd$addsub0001> created at line 202.
+    Found 8-bit subtractor for signal <msd$addsub0002> created at line 202.
+    Found 8-bit subtractor for signal <msd$addsub0003> created at line 202.
+    Found 8-bit subtractor for signal <msd$addsub0004> created at line 202.
+    Found 8-bit subtractor for signal <msd$addsub0005> created at line 202.
+    Found 8-bit subtractor for signal <msd$addsub0006> created at line 202.
+    Found 8-bit comparator less for signal <msd$cmp_lt0000> created at line 202.
+    Found 8-bit comparator less for signal <msd$cmp_lt0001> created at line 202.
+    Found 8-bit comparator less for signal <msd$cmp_lt0002> created at line 202.
+    Found 8-bit comparator less for signal <msd$cmp_lt0003> created at line 202.
+    Found 8-bit comparator less for signal <msd$cmp_lt0004> created at line 202.
+    Found 8-bit comparator less for signal <msd$cmp_lt0005> created at line 202.
+    Found 8-bit comparator less for signal <msd$cmp_lt0006> created at line 202.
     Summary:
 	inferred   1 ROM(s).
 	inferred  46 Adder/Subtractor(s).
@@ -415,14 +417,15 @@ Design Statistics
 # IOs                              : 23
 
 Cell Usage :
-# BELS                             : 267
+# BELS                             : 271
 #      GND                         : 1
 #      INV                         : 7
 #      LUT1                        : 62
-#      LUT2                        : 5
-#      LUT3                        : 7
-#      LUT4                        : 42
+#      LUT2                        : 8
+#      LUT3                        : 5
+#      LUT4                        : 43
 #      MUXCY                       : 78
+#      MUXF5                       : 2
 #      VCC                         : 1
 #      XORCY                       : 64
 # FlipFlops/Latches                : 76
@@ -442,9 +445,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       62  out of   4656     1%  
+ Number of Slices:                       63  out of   4656     1%  
  Number of Slice Flip Flops:             76  out of   9312     0%  
- Number of 4 input LUTs:                123  out of   9312     1%  
+ Number of 4 input LUTs:                125  out of   9312     1%  
  Number of IOs:                          23
  Number of bonded IOBs:                  23  out of    232     9%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -473,7 +476,7 @@ Clock Signal                              | Clock buffer(FF name)  | Load  |
 CLK                                       | BUFGP                  | 66    |
 d3/t_output_not0001(d3/t_output_not0001:O)| NONE(*)(d3/t_output_3) | 4     |
 d2/tmp_clk                                | NONE(d3/PS_FSM_FFd1)   | 3     |
-d3/t_valid_not0001(d3/t_valid_not00011:O) | NONE(*)(d3/t_valid)    | 1     |
+d3/t_valid_or0000(d3/t_valid_or00001:O)   | NONE(*)(d3/t_valid)    | 1     |
 d1/my_clk/tmp_clk                         | NONE(d1/cnt_dig_1)     | 2     |
 ------------------------------------------+------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
@@ -490,7 +493,7 @@ Timing Summary:
 Speed Grade: -4
 
    Minimum period: 5.240ns (Maximum Frequency: 190.857MHz)
-   Minimum input arrival time before clock: 5.789ns
+   Minimum input arrival time before clock: 5.816ns
    Maximum output required time after clock: 10.034ns
    Maximum combinational path delay: No path found
 
@@ -530,10 +533,10 @@ Delay:               5.240ns (Levels of Logic = 9)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'd2/tmp_clk'
-  Clock period: 1.781ns (frequency: 561.482MHz)
+  Clock period: 1.832ns (frequency: 545.852MHz)
   Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Delay:               1.781ns (Levels of Logic = 0)
+Delay:               1.832ns (Levels of Logic = 0)
   Source:            d3/PS_FSM_FFd1 (FF)
   Destination:       d3/PS_FSM_FFd3 (FF)
   Source Clock:      d2/tmp_clk rising
@@ -543,11 +546,11 @@ Delay:               1.781ns (Levels of Logic = 0)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              10   0.591   0.882  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
+     FD:C->Q              11   0.591   0.933  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
      FD:D                      0.308          d3/PS_FSM_FFd3
     ----------------------------------------
-    Total                      1.781ns (0.899ns logic, 0.882ns route)
-                                       (50.5% logic, 49.5% route)
+    Total                      1.832ns (0.899ns logic, 0.933ns route)
+                                       (49.1% logic, 50.9% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'd1/my_clk/tmp_clk'
@@ -573,45 +576,45 @@ Delay:               2.660ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'd3/t_output_not0001'
-  Total number of paths / destination ports: 28 / 4
+  Total number of paths / destination ports: 40 / 4
 -------------------------------------------------------------------------
-Offset:              5.789ns (Levels of Logic = 4)
-  Source:            ROWS<3> (PAD)
-  Destination:       d3/t_output_1 (LATCH)
+Offset:              5.816ns (Levels of Logic = 4)
+  Source:            ROWS<2> (PAD)
+  Destination:       d3/t_output_0 (LATCH)
   Destination Clock: d3/t_output_not0001 falling
 
-  Data Path: ROWS<3> to d3/t_output_1
+  Data Path: ROWS<2> to d3/t_output_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.218   0.961  ROWS_3_IBUF (ROWS_3_IBUF)
-     LUT4:I1->O            1   0.704   0.595  d3/t_output_mux0011<1>4 (d3/t_output_mux0011<1>4)
-     LUT4:I0->O            1   0.704   0.595  d3/t_output_mux0011<1>36_SW0 (N21)
-     LUT4:I0->O            1   0.704   0.000  d3/t_output_mux0011<1>36 (d3/t_output_mux0011<1>)
-     LD:D                      0.308          d3/t_output_1
+     IBUF:I->O            10   1.218   1.057  ROWS_2_IBUF (ROWS_2_IBUF)
+     LUT4:I0->O            2   0.704   0.622  d3/t_valid_cmp_eq00031 (d3/t_valid_cmp_eq0003)
+     LUT4:I0->O            1   0.704   0.499  d3/t_output_mux0010<0>9 (d3/t_output_mux0010<0>9)
+     LUT2:I1->O            1   0.704   0.000  d3/t_output_mux0010<0>10 (d3/t_output_mux0010<0>)
+     LD:D                      0.308          d3/t_output_0
     ----------------------------------------
-    Total                      5.789ns (3.638ns logic, 2.151ns route)
-                                       (62.8% logic, 37.2% route)
+    Total                      5.816ns (3.638ns logic, 2.178ns route)
+                                       (62.6% logic, 37.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'd3/t_valid_not0001'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'd3/t_valid_or0000'
   Total number of paths / destination ports: 4 / 1
 -------------------------------------------------------------------------
-Offset:              3.162ns (Levels of Logic = 2)
-  Source:            ROWS<1> (PAD)
+Offset:              3.225ns (Levels of Logic = 2)
+  Source:            ROWS<0> (PAD)
   Destination:       d3/t_valid (LATCH)
-  Destination Clock: d3/t_valid_not0001 falling
+  Destination Clock: d3/t_valid_or0000 falling
 
-  Data Path: ROWS<1> to d3/t_valid
+  Data Path: ROWS<0> to d3/t_valid
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             8   1.218   0.932  ROWS_1_IBUF (ROWS_1_IBUF)
-     LUT4:I0->O            1   0.704   0.000  d3/t_valid_or00001 (d3/t_valid_or0000)
+     IBUF:I->O             9   1.218   0.995  ROWS_0_IBUF (ROWS_0_IBUF)
+     LUT4:I0->O            2   0.704   0.000  d3/t_valid_or00001 (d3/t_valid_or0000)
      LD:D                      0.308          d3/t_valid
     ----------------------------------------
-    Total                      3.162ns (2.230ns logic, 0.932ns route)
-                                       (70.5% logic, 29.5% route)
+    Total                      3.225ns (2.230ns logic, 0.995ns route)
+                                       (69.1% logic, 30.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'd1/my_clk/tmp_clk'
@@ -639,7 +642,7 @@ Offset:              9.092ns (Levels of Logic = 4)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'd2/tmp_clk'
   Total number of paths / destination ports: 6 / 6
 -------------------------------------------------------------------------
-Offset:              5.869ns (Levels of Logic = 2)
+Offset:              5.920ns (Levels of Logic = 2)
   Source:            d3/PS_FSM_FFd1 (FF)
   Destination:       COLUMNS<2> (PAD)
   Source Clock:      d2/tmp_clk rising
@@ -648,12 +651,12 @@ Offset:              5.869ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              10   0.591   0.882  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
+     FD:C->Q              11   0.591   0.933  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
      INV:I->O              1   0.704   0.420  d3/PS_FSM_Out31_INV_0 (COLUMNS_2_OBUF)
      OBUF:I->O                 3.272          COLUMNS_2_OBUF (COLUMNS<2>)
     ----------------------------------------
-    Total                      5.869ns (4.567ns logic, 1.302ns route)
-                                       (77.8% logic, 22.2% route)
+    Total                      5.920ns (4.567ns logic, 1.353ns route)
+                                       (77.1% logic, 22.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'd3/t_output_not0001'
@@ -679,13 +682,13 @@ Offset:              10.034ns (Levels of Logic = 5)
                                        (67.4% logic, 32.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'd3/t_valid_not0001'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd3/t_valid_or0000'
   Total number of paths / destination ports: 28 / 7
 -------------------------------------------------------------------------
 Offset:              8.551ns (Levels of Logic = 4)
   Source:            d3/t_valid (LATCH)
   Destination:       CATHODES<7> (PAD)
-  Source Clock:      d3/t_valid_not0001 falling
+  Source Clock:      d3/t_valid_or0000 falling
 
   Data Path: d3/t_valid to CATHODES<7>
                                 Gate     Net
@@ -703,12 +706,12 @@ Offset:              8.551ns (Levels of Logic = 4)
 =========================================================================
 
 
-Total REAL time to Xst completion: 28.00 secs
-Total CPU time to Xst completion: 27.97 secs
+Total REAL time to Xst completion: 29.00 secs
+Total CPU time to Xst completion: 28.19 secs
  
 --> 
 
-Total memory usage is 263216 kilobytes
+Total memory usage is 264240 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)
