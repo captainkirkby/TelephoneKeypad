@@ -27,7 +27,7 @@ type state_type is (IDLE,A,B,C,D);
 signal PS,NS : state_type;
 
 -- Intermediate Signal Declarations
-signal Correct : STD_LOGIC_VECTOR(3 downto 0);
+signal Correct : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 
 begin
 

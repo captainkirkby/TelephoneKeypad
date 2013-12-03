@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.05 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.55 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.05 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.55 secs
  
 --> Reading design: passkeyEntry.prj
 
@@ -113,12 +113,12 @@ Architecture my_clk_div of Entity clk_div is up to date.
 Compiling vhdl file "K:/Final Project/my_clk_div.vhd" in Library work.
 Architecture my_clk_div of Entity my_clk_div is up to date.
 Compiling vhdl file "K:/Final Project/keypadDecoder.vhd" in Library work.
-Entity <keypaddecoder> compiled.
-Entity <keypaddecoder> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity keypaddecoder is up to date.
 Compiling vhdl file "K:/Final Project/FSM.vhd" in Library work.
 Architecture behavioral of Entity sequencedetectorfsm is up to date.
 Compiling vhdl file "K:/Final Project/passkeyEntry.vhd" in Library work.
-Architecture behavioral of Entity passkeyentry is up to date.
+Entity <passkeyentry> compiled.
+Entity <passkeyentry> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -144,6 +144,7 @@ Analyzing hierarchy for entity <Latch> in library <work> (architecture <behavior
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <passkeyEntry> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "K:/Final Project/passkeyEntry.vhd" line 83: Unconnected output port 'LEDS' of component 'keypadDecoder'.
 Entity <passkeyEntry> analyzed. Unit <passkeyEntry> generated.
 
 Analyzing Entity <sseg_dec> in library <work> (Architecture <my_sseg>).
@@ -168,10 +169,6 @@ Analyzing Entity <Latch> in library <work> (Architecture <behavioral>).
 Entity <Latch> analyzed. Unit <Latch> generated.
 
 Analyzing Entity <SequenceDetectorFSM> in library <work> (Architecture <behavioral>).
-INFO:Xst:2679 - Register <Correct<0>> in unit <SequenceDetectorFSM> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <Correct<1>> in unit <SequenceDetectorFSM> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <Correct<2>> in unit <SequenceDetectorFSM> has a constant value of 1 during circuit operation. The register is replaced by logic.
-INFO:Xst:2679 - Register <Correct<3>> in unit <SequenceDetectorFSM> has a constant value of 1 during circuit operation. The register is replaced by logic.
 Entity <SequenceDetectorFSM> analyzed. Unit <SequenceDetectorFSM> generated.
 
 
@@ -193,11 +190,23 @@ Unit <my_clk_div> synthesized.
 
 Synthesizing Unit <SequenceDetectorFSM>.
     Related source file is "K:/Final Project/FSM.vhd".
-WARNING:Xst:647 - Input <INPUT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Using one-hot encoding for signal <PS>.
-    Found 5-bit register for signal <PS>.
+    Found finite state machine <FSM_0> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 4                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <Correct_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Correct_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Correct_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Correct_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
-	inferred   5 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
 Unit <SequenceDetectorFSM> synthesized.
 
 
@@ -309,7 +318,7 @@ Unit <sseg_dec> synthesized.
 
 Synthesizing Unit <keypadDecoder>.
     Related source file is "K:/Final Project/keypadDecoder.vhd".
-    Found finite state machine <FSM_0> for signal <PS>.
+    Found finite state machine <FSM_1> for signal <PS>.
     -----------------------------------------------------------------------
     | States             | 3                                              |
     | Transitions        | 3                                              |
@@ -345,11 +354,11 @@ Macro Statistics
 # Counters                                             : 3
  2-bit up counter                                      : 1
  32-bit up counter                                     : 2
-# Registers                                            : 4
+# Registers                                            : 3
  1-bit register                                        : 2
  4-bit register                                        : 1
- 5-bit register                                        : 1
-# Latches                                              : 1
+# Latches                                              : 5
+ 1-bit latch                                           : 4
  4-bit latch                                           : 1
 # Comparators                                          : 18
  8-bit comparator less                                 : 18
@@ -362,7 +371,7 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Analyzing FSM <FSM_0> for best encoding.
+Analyzing FSM <FSM_1> for best encoding.
 Optimizing FSM <d3/PS/FSM> on signal <PS[1:3]> with one-hot encoding.
 -------------------
  State | Encoding
@@ -371,12 +380,31 @@ Optimizing FSM <d3/PS/FSM> on signal <PS[1:3]> with one-hot encoding.
  col1  | 010
  col2  | 100
 -------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <d4/PS/FSM> on signal <PS[1:5]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ idle  | 00001
+ a     | 00010
+ b     | 00100
+ c     | 01000
+ d     | 10000
+-------------------
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block Correct_0.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block Correct_1.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block Correct_2.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block Correct_3.
+   You should achieve better results by setting this init to 1.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 # ROMs                                                 : 2
  16x4-bit ROM                                          : 1
  16x8-bit ROM                                          : 1
@@ -389,7 +417,8 @@ Macro Statistics
  32-bit up counter                                     : 2
 # Registers                                            : 6
  Flip-Flops                                            : 6
-# Latches                                              : 1
+# Latches                                              : 5
+ 1-bit latch                                           : 4
  4-bit latch                                           : 1
 # Comparators                                          : 18
  8-bit comparator less                                 : 18
@@ -401,8 +430,18 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch Correct_0 hinder the constant cleaning in the block SequenceDetectorFSM.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch Correct_1 hinder the constant cleaning in the block SequenceDetectorFSM.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch Correct_2 hinder the constant cleaning in the block SequenceDetectorFSM.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch Correct_3 hinder the constant cleaning in the block SequenceDetectorFSM.
+   You should achieve better results by setting this init to 1.
 
 Optimizing unit <passkeyEntry> ...
+
+Optimizing unit <SequenceDetectorFSM> ...
 
 Optimizing unit <bin2bcdconv> ...
 
@@ -416,12 +455,18 @@ Found area constraint ratio of 100 (+ 5) on block passkeyEntry, actual ratio is 
 
 Final Macro Processing ...
 
+Processing Unit <passkeyEntry> :
+	Found 2-bit shift register for signal <d4/PS_FSM_FFd4>.
+Unit <passkeyEntry> processed.
+
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 75
- Flip-Flops                                            : 75
+# Registers                                            : 78
+ Flip-Flops                                            : 78
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
 
 =========================================================================
 
@@ -450,22 +495,25 @@ Design Statistics
 # IOs                              : 25
 
 Cell Usage :
-# BELS                             : 270
+# BELS                             : 275
 #      GND                         : 1
 #      INV                         : 7
 #      LUT1                        : 62
 #      LUT2                        : 8
 #      LUT3                        : 5
-#      LUT4                        : 38
+#      LUT4                        : 43
 #      MUXCY                       : 78
 #      MUXF5                       : 6
 #      VCC                         : 1
 #      XORCY                       : 64
-# FlipFlops/Latches                : 79
-#      FD                          : 4
+# FlipFlops/Latches                : 87
+#      FD                          : 8
 #      FDE                         : 6
 #      FDR                         : 65
 #      LD                          : 4
+#      LDE                         : 4
+# Shift Registers                  : 1
+#      SRL16                       : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 24
@@ -478,9 +526,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       59  out of   4656     1%  
- Number of Slice Flip Flops:             79  out of   9312     0%  
- Number of 4 input LUTs:                120  out of   9312     1%  
+ Number of Slices:                       67  out of   4656     1%  
+ Number of Slice Flip Flops:             87  out of   9312     0%  
+ Number of 4 input LUTs:                126  out of   9312     1%  
+    Number used as logic:               125
+    Number used as Shift registers:       1
  Number of IOs:                          25
  Number of bonded IOBs:                  25  out of    232    10%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -503,15 +553,19 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-CLK                                | BUFGP                  | 70    |
-d1/my_clk/tmp_clk                  | NONE(d1/cnt_dig_1)     | 2     |
-d3/t_latch(d3/t_latch:O)           | NONE(*)(d3/t_output_3) | 4     |
-d2/tmp_clk                         | NONE(d3/PS_FSM_FFd1)   | 3     |
------------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
+---------------------------------------------------+------------------------+-------+
+Clock Signal                                       | Clock buffer(FF name)  | Load  |
+---------------------------------------------------+------------------------+-------+
+CLK                                                | BUFGP                  | 70    |
+d2/tmp_clk                                         | NONE(d4/PS_FSM_FFd1)   | 8     |
+d4/Correct_0_cmp_eq0000(d4/Correct_0_cmp_eq00001:O)| NONE(*)(d4/Correct_0)  | 1     |
+d4/Correct_1_cmp_eq0000(d4/Correct_1_cmp_eq00001:O)| NONE(*)(d4/Correct_1)  | 1     |
+d4/Correct_2_cmp_eq0000(d4/Correct_2_cmp_eq00001:O)| NONE(*)(d4/Correct_2)  | 1     |
+d4/Correct_3_cmp_eq0000(d4/Correct_3_cmp_eq00001:O)| NONE(*)(d4/Correct_3)  | 1     |
+d1/my_clk/tmp_clk                                  | NONE(d1/cnt_dig_1)     | 2     |
+d3/t_latch(d3/t_latch:O)                           | NONE(*)(d3/t_output_3) | 4     |
+---------------------------------------------------+------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -539,16 +593,16 @@ Timing constraint: Default period analysis for Clock 'CLK'
   Total number of paths / destination ports: 3170 / 132
 -------------------------------------------------------------------------
 Delay:               5.240ns (Levels of Logic = 9)
-  Source:            d2/div_cnt_7 (FF)
+  Source:            d2/div_cnt_8 (FF)
   Destination:       d2/div_cnt_0 (FF)
   Source Clock:      CLK rising
   Destination Clock: CLK rising
 
-  Data Path: d2/div_cnt_7 to d2/div_cnt_0
+  Data Path: d2/div_cnt_8 to d2/div_cnt_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  d2/div_cnt_7 (d2/div_cnt_7)
+     FDR:C->Q              2   0.591   0.622  d2/div_cnt_8 (d2/div_cnt_8)
      LUT4:I0->O            1   0.704   0.000  d2/tmp_clk_cmp_eq0000_wg_lut<0> (d2/tmp_clk_cmp_eq0000_wg_lut<0>)
      MUXCY:S->O            1   0.464   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<0> (d2/tmp_clk_cmp_eq0000_wg_cy<0>)
      MUXCY:CI->O           1   0.059   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<1> (d2/tmp_clk_cmp_eq0000_wg_cy<1>)
@@ -562,6 +616,27 @@ Delay:               5.240ns (Levels of Logic = 9)
     ----------------------------------------
     Total                      5.240ns (3.355ns logic, 1.885ns route)
                                        (64.0% logic, 36.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'd2/tmp_clk'
+  Clock period: 4.014ns (frequency: 249.128MHz)
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               4.014ns (Levels of Logic = 0)
+  Source:            d4/Mshreg_PS_FSM_FFd4 (FF)
+  Destination:       d4/PS_FSM_FFd4 (FF)
+  Source Clock:      d2/tmp_clk rising
+  Destination Clock: d2/tmp_clk rising
+
+  Data Path: d4/Mshreg_PS_FSM_FFd4 to d4/PS_FSM_FFd4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRL16:CLK->Q          1   3.706   0.000  d4/Mshreg_PS_FSM_FFd4 (d4/Mshreg_PS_FSM_FFd4)
+     FD:D                      0.308          d4/PS_FSM_FFd4
+    ----------------------------------------
+    Total                      4.014ns (4.014ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'd1/my_clk/tmp_clk'
@@ -586,27 +661,6 @@ Delay:               2.739ns (Levels of Logic = 1)
                                        (58.5% logic, 41.5% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'd2/tmp_clk'
-  Clock period: 1.860ns (frequency: 537.634MHz)
-  Total number of paths / destination ports: 3 / 3
--------------------------------------------------------------------------
-Delay:               1.860ns (Levels of Logic = 0)
-  Source:            d3/PS_FSM_FFd1 (FF)
-  Destination:       d3/PS_FSM_FFd3 (FF)
-  Source Clock:      d2/tmp_clk rising
-  Destination Clock: d2/tmp_clk rising
-
-  Data Path: d3/PS_FSM_FFd1 to d3/PS_FSM_FFd3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q              12   0.591   0.961  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
-     FD:D                      0.308          d3/PS_FSM_FFd3
-    ----------------------------------------
-    Total                      1.860ns (0.899ns logic, 0.961ns route)
-                                       (48.3% logic, 51.7% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
   Total number of paths / destination ports: 16 / 4
 -------------------------------------------------------------------------
@@ -620,7 +674,7 @@ Offset:              5.369ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             8   1.218   0.932  ROWS_3_IBUF (ROWS_3_IBUF)
-     LUT4:I0->O            1   0.704   0.499  d3/t_latch_SW0 (N01)
+     LUT4:I0->O            1   0.704   0.499  d3/t_latch_SW0 (N0)
      LUT4:I1->O            8   0.704   0.757  d3/t_latch (d3/t_latch)
      FDE:CE                    0.555          d3/l1/Q_0
     ----------------------------------------
@@ -651,6 +705,86 @@ Offset:              5.892ns (Levels of Logic = 5)
                                        (67.2% logic, 32.8% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd4/Correct_1_cmp_eq0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.667ns (Levels of Logic = 2)
+  Source:            d4/Correct_1 (LATCH)
+  Destination:       DETECTEDLED (PAD)
+  Source Clock:      d4/Correct_1_cmp_eq0000 falling
+
+  Data Path: d4/Correct_1 to DETECTEDLED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.676   0.595  d4/Correct_1 (d4/Correct_1)
+     LUT4:I0->O            1   0.704   0.420  d4/DETECTED_cmp_eq00001 (DETECTEDLED_OBUF)
+     OBUF:I->O                 3.272          DETECTEDLED_OBUF (DETECTEDLED)
+    ----------------------------------------
+    Total                      5.667ns (4.652ns logic, 1.015ns route)
+                                       (82.1% logic, 17.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd4/Correct_0_cmp_eq0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.571ns (Levels of Logic = 2)
+  Source:            d4/Correct_0 (LATCH)
+  Destination:       DETECTEDLED (PAD)
+  Source Clock:      d4/Correct_0_cmp_eq0000 falling
+
+  Data Path: d4/Correct_0 to DETECTEDLED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.676   0.499  d4/Correct_0 (d4/Correct_0)
+     LUT4:I1->O            1   0.704   0.420  d4/DETECTED_cmp_eq00001 (DETECTEDLED_OBUF)
+     OBUF:I->O                 3.272          DETECTEDLED_OBUF (DETECTEDLED)
+    ----------------------------------------
+    Total                      5.571ns (4.652ns logic, 0.919ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd4/Correct_3_cmp_eq0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.527ns (Levels of Logic = 2)
+  Source:            d4/Correct_3 (LATCH)
+  Destination:       DETECTEDLED (PAD)
+  Source Clock:      d4/Correct_3_cmp_eq0000 falling
+
+  Data Path: d4/Correct_3 to DETECTEDLED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.676   0.455  d4/Correct_3 (d4/Correct_3)
+     LUT4:I2->O            1   0.704   0.420  d4/DETECTED_cmp_eq00001 (DETECTEDLED_OBUF)
+     OBUF:I->O                 3.272          DETECTEDLED_OBUF (DETECTEDLED)
+    ----------------------------------------
+    Total                      5.527ns (4.652ns logic, 0.875ns route)
+                                       (84.2% logic, 15.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd4/Correct_2_cmp_eq0000'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.496ns (Levels of Logic = 2)
+  Source:            d4/Correct_2 (LATCH)
+  Destination:       DETECTEDLED (PAD)
+  Source Clock:      d4/Correct_2_cmp_eq0000 falling
+
+  Data Path: d4/Correct_2 to DETECTEDLED
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              1   0.676   0.424  d4/Correct_2 (d4/Correct_2)
+     LUT4:I3->O            1   0.704   0.420  d4/DETECTED_cmp_eq00001 (DETECTEDLED_OBUF)
+     OBUF:I->O                 3.272          DETECTEDLED_OBUF (DETECTEDLED)
+    ----------------------------------------
+    Total                      5.496ns (4.652ns logic, 0.844ns route)
+                                       (84.6% logic, 15.4% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'd1/my_clk/tmp_clk'
   Total number of paths / destination ports: 99 / 11
 -------------------------------------------------------------------------
@@ -673,30 +807,10 @@ Offset:              8.031ns (Levels of Logic = 4)
                                        (69.6% logic, 30.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'd2/tmp_clk'
-  Total number of paths / destination ports: 6 / 6
--------------------------------------------------------------------------
-Offset:              5.948ns (Levels of Logic = 2)
-  Source:            d3/PS_FSM_FFd1 (FF)
-  Destination:       COLUMNS<2> (PAD)
-  Source Clock:      d2/tmp_clk rising
-
-  Data Path: d3/PS_FSM_FFd1 to COLUMNS<2>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q              12   0.591   0.961  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
-     INV:I->O              1   0.704   0.420  d3/PS_FSM_Out31_INV_0 (COLUMNS_2_OBUF)
-     OBUF:I->O                 3.272          COLUMNS_2_OBUF (COLUMNS<2>)
-    ----------------------------------------
-    Total                      5.948ns (4.567ns logic, 1.381ns route)
-                                       (76.8% logic, 23.2% route)
-
-=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 84 / 7
 -------------------------------------------------------------------------
-Offset:              7.657ns (Levels of Logic = 4)
+Offset:              7.827ns (Levels of Logic = 4)
   Source:            d3/l1/Q_1 (FF)
   Destination:       CATHODES<7> (PAD)
   Source Clock:      CLK rising
@@ -705,26 +819,46 @@ Offset:              7.657ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              4   0.591   0.762  d3/l1/Q_1 (d3/l1/Q_1)
+     FDE:C->Q              8   0.591   0.932  d3/l1/Q_1 (d3/l1/Q_1)
      LUT4:I0->O            1   0.704   0.000  d1/digit<1>1 (d1/digit<1>1)
      MUXF5:I1->O           7   0.321   0.883  d1/digit<1>_f5 (d1/digit<1>)
      LUT4:I0->O            1   0.704   0.420  d1/Mrom_SEGMENTS111 (CATHODES_1_OBUF)
      OBUF:I->O                 3.272          CATHODES_1_OBUF (CATHODES<1>)
     ----------------------------------------
-    Total                      7.657ns (5.592ns logic, 2.065ns route)
-                                       (73.0% logic, 27.0% route)
+    Total                      7.827ns (5.592ns logic, 2.235ns route)
+                                       (71.4% logic, 28.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd2/tmp_clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              5.920ns (Levels of Logic = 2)
+  Source:            d3/PS_FSM_FFd1 (FF)
+  Destination:       COLUMNS<2> (PAD)
+  Source Clock:      d2/tmp_clk rising
+
+  Data Path: d3/PS_FSM_FFd1 to COLUMNS<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              11   0.591   0.933  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
+     INV:I->O              1   0.704   0.420  d3/PS_FSM_Out31_INV_0 (COLUMNS_2_OBUF)
+     OBUF:I->O                 3.272          COLUMNS_2_OBUF (COLUMNS<2>)
+    ----------------------------------------
+    Total                      5.920ns (4.567ns logic, 1.353ns route)
+                                       (77.1% logic, 22.9% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 31.00 secs
-Total CPU time to Xst completion: 30.67 secs
+Total REAL time to Xst completion: 36.00 secs
+Total CPU time to Xst completion: 36.14 secs
  
 --> 
 
-Total memory usage is 263024 kilobytes
+Total memory usage is 296816 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    2 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :   14 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

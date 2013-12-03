@@ -83,7 +83,7 @@ d2: my_clk_div PORT MAP(clk => CLK,
 d3: keypadDecoder PORT MAP(ROWS => ROWS,
 									FCLK => CLK,
 									CLK => t2,
-									LEDS => LEDS,
+									LEDS => open,
 									COLUMNS => COLUMNS,
 									OUTPUT => t4,
 									VALID => t1);
@@ -95,6 +95,8 @@ d4: SequenceDetectorFSM PORT MAP(INPUT => t4,
 
 t8 <= "0000" & t4;
 HIGH <= '1';
+
+LEDS <= "000";
 
 end Behavioral;
 
