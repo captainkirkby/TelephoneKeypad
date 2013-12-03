@@ -54,11 +54,17 @@ begin
 
 	case PS is
 		when COL0 => 
-			-- Column 0 is low/high
+			-- Column 0 is low
+			COLUMNS <= "011";
+
 		when COL1 =>
-			-- Column 1 is low/high
+			-- Column 1 is low
+			COLUMNS <= "101";
+
 		when COL2 =>
-			-- Column 2 is low/high
+			-- Column 2 is low
+			COLUMNS <= "110";
+
 	end case;
 end process comb_proc;
 
