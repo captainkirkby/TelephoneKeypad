@@ -1,0 +1,613 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.56 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.56 secs
+ 
+--> Reading design: passkeyEntry.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "passkeyEntry.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "passkeyEntry"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : passkeyEntry
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "K:/Final Project/sseg_dec.vhd" in Library work.
+Architecture my_sseg of Entity sseg_dec is up to date.
+Architecture my_ckt of Entity bin2bcdconv is up to date.
+Architecture my_clk_div of Entity clk_div is up to date.
+Compiling vhdl file "K:/Final Project/my_clk_div.vhd" in Library work.
+Architecture my_clk_div of Entity my_clk_div is up to date.
+Compiling vhdl file "K:/Final Project/keypadDecoder.vhd" in Library work.
+Architecture behavioral of Entity keypaddecoder is up to date.
+Compiling vhdl file "K:/Final Project/passkeyEntry.vhd" in Library work.
+Architecture behavioral of Entity passkeyentry is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <passkeyEntry> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <sseg_dec> in library <work> (architecture <my_sseg>).
+
+Analyzing hierarchy for entity <my_clk_div> in library <work> (architecture <my_clk_div>).
+
+Analyzing hierarchy for entity <keypadDecoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <bin2bcdconv> in library <work> (architecture <my_ckt>).
+
+Analyzing hierarchy for entity <clk_div> in library <work> (architecture <my_clk_div>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <passkeyEntry> in library <work> (Architecture <behavioral>).
+Entity <passkeyEntry> analyzed. Unit <passkeyEntry> generated.
+
+Analyzing Entity <sseg_dec> in library <work> (Architecture <my_sseg>).
+INFO:Xst:1561 - "K:/Final Project/sseg_dec.vhd" line 128: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "K:/Final Project/sseg_dec.vhd" line 136: Mux is complete : default of case is discarded
+Entity <sseg_dec> analyzed. Unit <sseg_dec> generated.
+
+Analyzing Entity <bin2bcdconv> in library <work> (Architecture <my_ckt>).
+Entity <bin2bcdconv> analyzed. Unit <bin2bcdconv> generated.
+
+Analyzing Entity <clk_div> in library <work> (Architecture <my_clk_div>).
+Entity <clk_div> analyzed. Unit <clk_div> generated.
+
+Analyzing Entity <my_clk_div> in library <work> (Architecture <my_clk_div>).
+Entity <my_clk_div> analyzed. Unit <my_clk_div> generated.
+
+Analyzing Entity <keypadDecoder> in library <work> (Architecture <behavioral>).
+Entity <keypadDecoder> analyzed. Unit <keypadDecoder> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <my_clk_div>.
+    Related source file is "K:/Final Project/my_clk_div.vhd".
+    Found 32-bit up counter for signal <div_cnt>.
+    Found 1-bit register for signal <tmp_clk>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <my_clk_div> synthesized.
+
+
+Synthesizing Unit <keypadDecoder>.
+    Related source file is "K:/Final Project/keypadDecoder.vhd".
+WARNING:Xst:647 - Input <ROWS> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <t_valid> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <t_output> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+    Found finite state machine <FSM_0> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 6                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Power Up State     | col0                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <keypadDecoder> synthesized.
+
+
+Synthesizing Unit <bin2bcdconv>.
+    Related source file is "K:/Final Project/sseg_dec.vhd".
+    Using one-hot encoding for signal <msd$mux0000>.
+    Using one-hot encoding for signal <mmsd$mux0000>.
+    Found 16x4-bit ROM for signal <LSD_OUT>.
+    Found 8-bit adder for signal <cnt_tot$addsub0000> created at line 177.
+    Found 8-bit adder for signal <cnt_tot$addsub0001> created at line 178.
+    Found 8-bit adder for signal <cnt_tot$addsub0002> created at line 179.
+    Found 8-bit adder for signal <cnt_tot$addsub0003> created at line 180.
+    Found 8-bit adder for signal <cnt_tot$addsub0004> created at line 181.
+    Found 8-bit adder for signal <cnt_tot$addsub0005> created at line 182.
+    Found 8-bit adder for signal <cnt_tot$addsub0006> created at line 183.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0007> created at line 194.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0008> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0009> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0010> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0011> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0012> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0013> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0014> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0015> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0016> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0017> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0018> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0019> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0020> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0021> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0022> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0023> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0024> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0025> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0026> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0027> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0028> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$addsub0029> created at line 201.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0000> created at line 191.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0001> created at line 194.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0002> created at line 198.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0003> created at line 201.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0004> created at line 201.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0005> created at line 201.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0006> created at line 201.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0007> created at line 201.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0008> created at line 201.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0009> created at line 201.
+    Found 8-bit comparator less for signal <cnt_tot$cmp_lt0010> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$sub0000> created at line 194.
+    Found 8-bit subtractor for signal <cnt_tot$sub0008> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$sub0015> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$sub0021> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$sub0026> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$sub0030> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$sub0033> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$sub0035> created at line 201.
+    Found 8-bit subtractor for signal <cnt_tot$sub0036> created at line 201.
+    Found 8-bit subtractor for signal <msd$addsub0000> created at line 201.
+    Found 8-bit subtractor for signal <msd$addsub0001> created at line 201.
+    Found 8-bit subtractor for signal <msd$addsub0002> created at line 201.
+    Found 8-bit subtractor for signal <msd$addsub0003> created at line 201.
+    Found 8-bit subtractor for signal <msd$addsub0004> created at line 201.
+    Found 8-bit subtractor for signal <msd$addsub0005> created at line 201.
+    Found 8-bit subtractor for signal <msd$addsub0006> created at line 201.
+    Found 8-bit comparator less for signal <msd$cmp_lt0000> created at line 201.
+    Found 8-bit comparator less for signal <msd$cmp_lt0001> created at line 201.
+    Found 8-bit comparator less for signal <msd$cmp_lt0002> created at line 201.
+    Found 8-bit comparator less for signal <msd$cmp_lt0003> created at line 201.
+    Found 8-bit comparator less for signal <msd$cmp_lt0004> created at line 201.
+    Found 8-bit comparator less for signal <msd$cmp_lt0005> created at line 201.
+    Found 8-bit comparator less for signal <msd$cmp_lt0006> created at line 201.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  46 Adder/Subtractor(s).
+	inferred  18 Comparator(s).
+Unit <bin2bcdconv> synthesized.
+
+
+Synthesizing Unit <clk_div>.
+    Related source file is "K:/Final Project/sseg_dec.vhd".
+    Found 32-bit up counter for signal <div_cnt>.
+    Found 1-bit register for signal <tmp_clk>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clk_div> synthesized.
+
+
+Synthesizing Unit <sseg_dec>.
+    Related source file is "K:/Final Project/sseg_dec.vhd".
+    Found 16x8-bit ROM for signal <SEGMENTS>.
+    Found 1-of-4 decoder for signal <DISP_EN>.
+    Found 2-bit up counter for signal <cnt_dig>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   1 Decoder(s).
+Unit <sseg_dec> synthesized.
+
+
+Synthesizing Unit <passkeyEntry>.
+    Related source file is "K:/Final Project/passkeyEntry.vhd".
+Unit <passkeyEntry> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x4-bit ROM                                          : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 46
+ 8-bit adder                                           : 7
+ 8-bit subtractor                                      : 39
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 2
+ 1-bit register                                        : 2
+# Comparators                                          : 18
+ 8-bit comparator less                                 : 18
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <d3/PS/FSM> on signal <PS[1:3]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ col0  | 001
+ col1  | 010
+ col2  | 100
+-------------------
+WARNING:Xst:1290 - Hierarchical block <my_conv> is unconnected in block <d1>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 2
+ 16x4-bit ROM                                          : 1
+ 16x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 46
+ 4-bit subtractor                                      : 1
+ 8-bit adder                                           : 7
+ 8-bit subtractor                                      : 38
+# Counters                                             : 3
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+# Comparators                                          : 18
+ 8-bit comparator less                                 : 18
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1899 - Due to constant pushing, all outputs of the instance <my_conv> of the block <bin2bcdconv> are unconnected in block <sseg_dec>.
+   This instance will be removed from the design along with all underlying logic
+
+Optimizing unit <passkeyEntry> ...
+
+Optimizing unit <bin2bcdconv> ...
+
+Optimizing unit <sseg_dec> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block passkeyEntry, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 71
+ Flip-Flops                                            : 71
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : passkeyEntry.ngr
+Top Level Output File Name         : passkeyEntry
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 23
+
+Cell Usage :
+# BELS                             : 234
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 62
+#      LUT2                        : 5
+#      LUT4                        : 16
+#      MUXCY                       : 78
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 71
+#      FD                          : 4
+#      FDE                         : 2
+#      FDR                         : 65
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      OBUF                        : 18
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       45  out of   4656     0%  
+ Number of Slice Flip Flops:             71  out of   9312     0%  
+ Number of 4 input LUTs:                 90  out of   9312     0%  
+ Number of IOs:                          23
+ Number of bonded IOBs:                  19  out of    232     8%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 66    |
+d2/tmp_clk                         | NONE(d3/PS_FSM_FFd1)   | 3     |
+d1/my_clk/tmp_clk                  | NONE(d1/cnt_dig_1)     | 2     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.240ns (Maximum Frequency: 190.857MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 5.831ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 5.240ns (frequency: 190.857MHz)
+  Total number of paths / destination ports: 3170 / 132
+-------------------------------------------------------------------------
+Delay:               5.240ns (Levels of Logic = 9)
+  Source:            d2/div_cnt_8 (FF)
+  Destination:       d2/div_cnt_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: d2/div_cnt_8 to d2/div_cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  d2/div_cnt_8 (d2/div_cnt_8)
+     LUT4:I0->O            1   0.704   0.000  d2/tmp_clk_cmp_eq0000_wg_lut<0> (d2/tmp_clk_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<0> (d2/tmp_clk_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<1> (d2/tmp_clk_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<2> (d2/tmp_clk_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<3> (d2/tmp_clk_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<4> (d2/tmp_clk_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<5> (d2/tmp_clk_cmp_eq0000_wg_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  d2/tmp_clk_cmp_eq0000_wg_cy<6> (d2/tmp_clk_cmp_eq0000_wg_cy<6>)
+     MUXCY:CI->O          33   0.331   1.263  d2/tmp_clk_cmp_eq0000_wg_cy<7> (d2/tmp_clk_cmp_eq0000)
+     FDR:R                     0.911          d2/div_cnt_0
+    ----------------------------------------
+    Total                      5.240ns (3.355ns logic, 1.885ns route)
+                                       (64.0% logic, 36.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'd2/tmp_clk'
+  Clock period: 1.430ns (frequency: 699.301MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.430ns (Levels of Logic = 0)
+  Source:            d3/PS_FSM_FFd2 (FF)
+  Destination:       d3/PS_FSM_FFd1 (FF)
+  Source Clock:      d2/tmp_clk rising
+  Destination Clock: d2/tmp_clk rising
+
+  Data Path: d3/PS_FSM_FFd2 to d3/PS_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.591   0.531  d3/PS_FSM_FFd2 (d3/PS_FSM_FFd2)
+     FD:D                      0.308          d3/PS_FSM_FFd1
+    ----------------------------------------
+    Total                      1.430ns (0.899ns logic, 0.531ns route)
+                                       (62.9% logic, 37.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'd1/my_clk/tmp_clk'
+  Clock period: 2.411ns (frequency: 414.766MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.411ns (Levels of Logic = 1)
+  Source:            d1/cnt_dig_1 (FF)
+  Destination:       d1/cnt_dig_1 (FF)
+  Source Clock:      d1/my_clk/tmp_clk rising
+  Destination Clock: d1/my_clk/tmp_clk rising
+
+  Data Path: d1/cnt_dig_1 to d1/cnt_dig_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.591   0.808  d1/cnt_dig_1 (d1/cnt_dig_1)
+     LUT2:I0->O            1   0.704   0.000  d1/Mcount_cnt_dig_xor<1>11 (d1/Result<1>)
+     FD:D                      0.308          d1/cnt_dig_1
+    ----------------------------------------
+    Total                      2.411ns (1.603ns logic, 0.808ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd1/my_clk/tmp_clk'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              5.831ns (Levels of Logic = 2)
+  Source:            d1/cnt_dig_0 (FF)
+  Destination:       ANODES<3> (PAD)
+  Source Clock:      d1/my_clk/tmp_clk rising
+
+  Data Path: d1/cnt_dig_0 to ANODES<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.591   0.844  d1/cnt_dig_0 (d1/cnt_dig_0)
+     LUT2:I0->O            1   0.704   0.420  d1/Mdecod_DISP_EN31 (ANODES_3_OBUF)
+     OBUF:I->O                 3.272          ANODES_3_OBUF (ANODES<3>)
+    ----------------------------------------
+    Total                      5.831ns (4.567ns logic, 1.264ns route)
+                                       (78.3% logic, 21.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'd2/tmp_clk'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              5.518ns (Levels of Logic = 2)
+  Source:            d3/PS_FSM_FFd3 (FF)
+  Destination:       COLUMNS<2> (PAD)
+  Source Clock:      d2/tmp_clk rising
+
+  Data Path: d3/PS_FSM_FFd3 to COLUMNS<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.591   0.531  d3/PS_FSM_FFd3 (d3/PS_FSM_FFd3)
+     INV:I->O              1   0.704   0.420  d3/PS_FSM_Out31_INV_0 (COLUMNS_2_OBUF)
+     OBUF:I->O                 3.272          COLUMNS_2_OBUF (COLUMNS<2>)
+    ----------------------------------------
+    Total                      5.518ns (4.567ns logic, 0.951ns route)
+                                       (82.8% logic, 17.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 25.74 secs
+ 
+--> 
+
+Total memory usage is 261104 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

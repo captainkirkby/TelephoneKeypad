@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=K:\Final Project\passkeyEntry.ncd
+OUTFILE=K:\Final Project\passkeyEntry.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=K:\Final Project
+LICENSE=WebPack
+USER_INFO=210802616_0_0_555

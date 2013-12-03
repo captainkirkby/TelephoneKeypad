@@ -1,0 +1,40 @@
+// Krishna Polavali and Dylan Kirkby
+// Date: 10/29/13
+// Description: Constraints File
+
+//Clock
+NET "CLK" LOC = B8;
+
+//Cathodes
+NET "CATHODES<0>" LOC = C17;
+NET "CATHODES<1>" LOC = H14;
+NET "CATHODES<2>" LOC = J17;
+NET "CATHODES<3>" LOC = G14;
+NET "CATHODES<4>" LOC = D16;
+NET "CATHODES<5>" LOC = D17;
+NET "CATHODES<6>" LOC = F18;
+NET "CATHODES<7>" LOC = L18;
+
+//Anodes
+NET "ANODES<0>" LOC = F15;
+NET "ANODES<1>" LOC = C18;
+NET "ANODES<2>" LOC = H17;
+NET "ANODES<3>" LOC = F17;
+
+//Rows
+NET "ROWS<0>" LOC = L15;
+NET "ROWS<1>" LOC = K12;
+NET "ROWS<2>" LOC = L17;
+NET "ROWS<3>" LOC = M15;
+
+//Columns
+NET "COLUMNS<0>" LOC = K13;
+NET "COLUMNS<1>" LOC = L16;
+NET "COLUMNS<2>" LOC = M14;
+
+//LEDS
+NET "LEDS<0>" LOC = E17;
+NET "LEDS<1>" LOC = P15;
+NET "LEDS<2>" LOC = F4;
+//NET "LEDS<3>" LOC = R4;
+
