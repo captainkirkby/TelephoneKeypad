@@ -31,7 +31,7 @@ begin
 	proc1: process (D,L,R,CLK)
 	begin
 		if(R = '0') then
-			Q <= '0';
+			Q <= "0000";
 		elsif(rising_edge(CLK) AND L = '1') then
 			Q <= D;
 		end if;

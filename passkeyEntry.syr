@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.03 secs
+Total CPU time to Xst completion: 1.05 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 1.33 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 1.05 secs
  
 --> Reading design: passkeyEntry.prj
 
@@ -104,25 +104,21 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling vhdl file "K:/Final Project/Latch.vhd" in Library work.
+Architecture behavioral of Entity latch is up to date.
 Compiling vhdl file "K:/Final Project/sseg_dec.vhd" in Library work.
-Entity <sseg_dec> compiled.
-Entity <sseg_dec> (Architecture <my_sseg>) compiled.
-Entity <bin2bcdconv> compiled.
-Entity <bin2bcdconv> (Architecture <my_ckt>) compiled.
-Entity <clk_div> compiled.
-Entity <clk_div> (Architecture <my_clk_div>) compiled.
+Architecture my_sseg of Entity sseg_dec is up to date.
+Architecture my_ckt of Entity bin2bcdconv is up to date.
+Architecture my_clk_div of Entity clk_div is up to date.
 Compiling vhdl file "K:/Final Project/my_clk_div.vhd" in Library work.
-Entity <my_clk_div> compiled.
-Entity <my_clk_div> (Architecture <my_clk_div>) compiled.
+Architecture my_clk_div of Entity my_clk_div is up to date.
 Compiling vhdl file "K:/Final Project/keypadDecoder.vhd" in Library work.
 Entity <keypaddecoder> compiled.
 Entity <keypaddecoder> (Architecture <behavioral>) compiled.
 Compiling vhdl file "K:/Final Project/FSM.vhd" in Library work.
-Entity <SequenceDetectorFSM> compiled.
-Entity <SequenceDetectorFSM> (Architecture <Behavioral>) compiled.
+Architecture behavioral of Entity sequencedetectorfsm is up to date.
 Compiling vhdl file "K:/Final Project/passkeyEntry.vhd" in Library work.
-Entity <passkeyentry> compiled.
-Entity <passkeyentry> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity passkeyentry is up to date.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -135,11 +131,13 @@ Analyzing hierarchy for entity <my_clk_div> in library <work> (architecture <my_
 
 Analyzing hierarchy for entity <keypadDecoder> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <SequenceDetectorFSM> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <SequenceDetectorFSM> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <bin2bcdconv> in library <work> (architecture <my_ckt>).
 
 Analyzing hierarchy for entity <clk_div> in library <work> (architecture <my_clk_div>).
+
+Analyzing hierarchy for entity <Latch> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
@@ -166,7 +164,10 @@ Analyzing Entity <keypadDecoder> in library <work> (Architecture <behavioral>).
 INFO:Xst:2679 - Register <t_valid> in unit <keypadDecoder> has a constant value of 1 during circuit operation. The register is replaced by logic.
 Entity <keypadDecoder> analyzed. Unit <keypadDecoder> generated.
 
-Analyzing Entity <SequenceDetectorFSM> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <Latch> in library <work> (Architecture <behavioral>).
+Entity <Latch> analyzed. Unit <Latch> generated.
+
+Analyzing Entity <SequenceDetectorFSM> in library <work> (Architecture <behavioral>).
 INFO:Xst:2679 - Register <Correct<0>> in unit <SequenceDetectorFSM> has a constant value of 1 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <Correct<1>> in unit <SequenceDetectorFSM> has a constant value of 1 during circuit operation. The register is replaced by logic.
 INFO:Xst:2679 - Register <Correct<2>> in unit <SequenceDetectorFSM> has a constant value of 1 during circuit operation. The register is replaced by logic.
@@ -188,26 +189,6 @@ Synthesizing Unit <my_clk_div>.
 	inferred   1 Counter(s).
 	inferred   1 D-type flip-flop(s).
 Unit <my_clk_div> synthesized.
-
-
-Synthesizing Unit <keypadDecoder>.
-    Related source file is "K:/Final Project/keypadDecoder.vhd".
-    Found finite state machine <FSM_0> for signal <PS>.
-    -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 3                                              |
-    | Inputs             | 0                                              |
-    | Outputs            | 6                                              |
-    | Clock              | CLK                       (rising_edge)        |
-    | Power Up State     | col0                                           |
-    | Encoding           | automatic                                      |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
-WARNING:Xst:737 - Found 4-bit latch for signal <t_output>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Summary:
-	inferred   1 Finite State Machine(s).
-Unit <keypadDecoder> synthesized.
 
 
 Synthesizing Unit <SequenceDetectorFSM>.
@@ -306,6 +287,14 @@ Synthesizing Unit <clk_div>.
 Unit <clk_div> synthesized.
 
 
+Synthesizing Unit <Latch>.
+    Related source file is "K:/Final Project/Latch.vhd".
+    Found 4-bit register for signal <Q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Latch> synthesized.
+
+
 Synthesizing Unit <sseg_dec>.
     Related source file is "K:/Final Project/sseg_dec.vhd".
     Found 16x8-bit ROM for signal <SEGMENTS>.
@@ -316,6 +305,26 @@ Synthesizing Unit <sseg_dec>.
 	inferred   1 Counter(s).
 	inferred   1 Decoder(s).
 Unit <sseg_dec> synthesized.
+
+
+Synthesizing Unit <keypadDecoder>.
+    Related source file is "K:/Final Project/keypadDecoder.vhd".
+    Found finite state machine <FSM_0> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 6                                              |
+    | Clock              | CLK                       (rising_edge)        |
+    | Power Up State     | col0                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 4-bit latch for signal <t_output>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <keypadDecoder> synthesized.
 
 
 Synthesizing Unit <passkeyEntry>.
@@ -336,8 +345,9 @@ Macro Statistics
 # Counters                                             : 3
  2-bit up counter                                      : 1
  32-bit up counter                                     : 2
-# Registers                                            : 3
+# Registers                                            : 4
  1-bit register                                        : 2
+ 4-bit register                                        : 1
  5-bit register                                        : 1
 # Latches                                              : 1
  4-bit latch                                           : 1
@@ -377,8 +387,8 @@ Macro Statistics
 # Counters                                             : 3
  2-bit up counter                                      : 1
  32-bit up counter                                     : 2
-# Registers                                            : 2
- Flip-Flops                                            : 2
+# Registers                                            : 6
+ Flip-Flops                                            : 6
 # Latches                                              : 1
  4-bit latch                                           : 1
 # Comparators                                          : 18
@@ -396,9 +406,9 @@ Optimizing unit <passkeyEntry> ...
 
 Optimizing unit <bin2bcdconv> ...
 
-Optimizing unit <keypadDecoder> ...
-
 Optimizing unit <sseg_dec> ...
+
+Optimizing unit <keypadDecoder> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -410,8 +420,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 71
- Flip-Flops                                            : 71
+# Registers                                            : 75
+ Flip-Flops                                            : 75
 
 =========================================================================
 
@@ -451,9 +461,9 @@ Cell Usage :
 #      MUXF5                       : 6
 #      VCC                         : 1
 #      XORCY                       : 64
-# FlipFlops/Latches                : 75
+# FlipFlops/Latches                : 79
 #      FD                          : 4
-#      FDE                         : 2
+#      FDE                         : 6
 #      FDR                         : 65
 #      LD                          : 4
 # Clock Buffers                    : 1
@@ -469,7 +479,7 @@ Device utilization summary:
 Selected Device : 3s500efg320-4 
 
  Number of Slices:                       59  out of   4656     1%  
- Number of Slice Flip Flops:             75  out of   9312     0%  
+ Number of Slice Flip Flops:             79  out of   9312     0%  
  Number of 4 input LUTs:                120  out of   9312     1%  
  Number of IOs:                          25
  Number of bonded IOBs:                  25  out of    232    10%  
@@ -493,14 +503,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-----------------------------------------+------------------------+-------+
-Clock Signal                            | Clock buffer(FF name)  | Load  |
-----------------------------------------+------------------------+-------+
-CLK                                     | BUFGP                  | 66    |
-d3/t_output_or0000(d3/t_output_or0000:O)| NONE(*)(d3/t_output_3) | 4     |
-d2/tmp_clk                              | NONE(d3/PS_FSM_FFd1)   | 3     |
-d1/my_clk/tmp_clk                       | NONE(d1/cnt_dig_1)     | 2     |
-----------------------------------------+------------------------+-------+
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 70    |
+d1/my_clk/tmp_clk                  | NONE(d1/cnt_dig_1)     | 2     |
+d3/t_latch(d3/t_latch:O)           | NONE(*)(d3/t_output_3) | 4     |
+d2/tmp_clk                         | NONE(d3/PS_FSM_FFd1)   | 3     |
+-----------------------------------+------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -554,27 +564,6 @@ Delay:               5.240ns (Levels of Logic = 9)
                                        (64.0% logic, 36.0% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'd2/tmp_clk'
-  Clock period: 1.860ns (frequency: 537.634MHz)
-  Total number of paths / destination ports: 3 / 3
--------------------------------------------------------------------------
-Delay:               1.860ns (Levels of Logic = 0)
-  Source:            d3/PS_FSM_FFd1 (FF)
-  Destination:       d3/PS_FSM_FFd3 (FF)
-  Source Clock:      d2/tmp_clk rising
-  Destination Clock: d2/tmp_clk rising
-
-  Data Path: d3/PS_FSM_FFd1 to d3/PS_FSM_FFd3
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FD:C->Q              12   0.591   0.961  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
-     FD:D                      0.308          d3/PS_FSM_FFd3
-    ----------------------------------------
-    Total                      1.860ns (0.899ns logic, 0.961ns route)
-                                       (48.3% logic, 51.7% route)
-
-=========================================================================
 Timing constraint: Default period analysis for Clock 'd1/my_clk/tmp_clk'
   Clock period: 2.739ns (frequency: 365.097MHz)
   Total number of paths / destination ports: 3 / 2
@@ -597,13 +586,55 @@ Delay:               2.739ns (Levels of Logic = 1)
                                        (58.5% logic, 41.5% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'd3/t_output_or0000'
+Timing constraint: Default period analysis for Clock 'd2/tmp_clk'
+  Clock period: 1.860ns (frequency: 537.634MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.860ns (Levels of Logic = 0)
+  Source:            d3/PS_FSM_FFd1 (FF)
+  Destination:       d3/PS_FSM_FFd3 (FF)
+  Source Clock:      d2/tmp_clk rising
+  Destination Clock: d2/tmp_clk rising
+
+  Data Path: d3/PS_FSM_FFd1 to d3/PS_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.591   0.961  d3/PS_FSM_FFd1 (d3/PS_FSM_FFd1)
+     FD:D                      0.308          d3/PS_FSM_FFd3
+    ----------------------------------------
+    Total                      1.860ns (0.899ns logic, 0.961ns route)
+                                       (48.3% logic, 51.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 16 / 4
+-------------------------------------------------------------------------
+Offset:              5.369ns (Levels of Logic = 3)
+  Source:            ROWS<3> (PAD)
+  Destination:       d3/l1/Q_0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: ROWS<3> to d3/l1/Q_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.218   0.932  ROWS_3_IBUF (ROWS_3_IBUF)
+     LUT4:I0->O            1   0.704   0.499  d3/t_latch_SW0 (N01)
+     LUT4:I1->O            8   0.704   0.757  d3/t_latch (d3/t_latch)
+     FDE:CE                    0.555          d3/l1/Q_0
+    ----------------------------------------
+    Total                      5.369ns (3.181ns logic, 2.188ns route)
+                                       (59.2% logic, 40.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'd3/t_latch'
   Total number of paths / destination ports: 28 / 4
 -------------------------------------------------------------------------
 Offset:              5.892ns (Levels of Logic = 5)
   Source:            ROWS<0> (PAD)
   Destination:       d3/t_output_1 (LATCH)
-  Destination Clock: d3/t_output_or0000 falling
+  Destination Clock: d3/t_latch falling
 
   Data Path: ROWS<0> to d3/t_output_1
                                 Gate     Net
@@ -662,36 +693,36 @@ Offset:              5.948ns (Levels of Logic = 2)
                                        (76.8% logic, 23.2% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'd3/t_output_or0000'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
   Total number of paths / destination ports: 84 / 7
 -------------------------------------------------------------------------
-Offset:              7.742ns (Levels of Logic = 4)
-  Source:            d3/t_output_1 (LATCH)
+Offset:              7.657ns (Levels of Logic = 4)
+  Source:            d3/l1/Q_1 (FF)
   Destination:       CATHODES<7> (PAD)
-  Source Clock:      d3/t_output_or0000 falling
+  Source Clock:      CLK rising
 
-  Data Path: d3/t_output_1 to CATHODES<7>
+  Data Path: d3/l1/Q_1 to CATHODES<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               4   0.676   0.762  d3/t_output_1 (d3/t_output_1)
+     FDE:C->Q              4   0.591   0.762  d3/l1/Q_1 (d3/l1/Q_1)
      LUT4:I0->O            1   0.704   0.000  d1/digit<1>1 (d1/digit<1>1)
      MUXF5:I1->O           7   0.321   0.883  d1/digit<1>_f5 (d1/digit<1>)
      LUT4:I0->O            1   0.704   0.420  d1/Mrom_SEGMENTS111 (CATHODES_1_OBUF)
      OBUF:I->O                 3.272          CATHODES_1_OBUF (CATHODES<1>)
     ----------------------------------------
-    Total                      7.742ns (5.677ns logic, 2.065ns route)
-                                       (73.3% logic, 26.7% route)
+    Total                      7.657ns (5.592ns logic, 2.065ns route)
+                                       (73.0% logic, 27.0% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 38.00 secs
-Total CPU time to Xst completion: 37.79 secs
+Total REAL time to Xst completion: 31.00 secs
+Total CPU time to Xst completion: 30.67 secs
  
 --> 
 
-Total memory usage is 295408 kilobytes
+Total memory usage is 263024 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

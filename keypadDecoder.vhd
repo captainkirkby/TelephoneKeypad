@@ -19,6 +19,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity keypadDecoder is
     Port ( ROWS : in  STD_LOGIC_VECTOR (3 downto 0);
+			  FCLK : in STD_LOGIC;
            CLK : in  STD_LOGIC;
 			  LEDS : out STD_LOGIC_VECTOR (2 downto 0);
            COLUMNS : out  STD_LOGIC_VECTOR (2 downto 0);
@@ -28,22 +29,40 @@ end keypadDecoder;
 
 architecture Behavioral of keypadDecoder is
 
+-- Component Declarations
+component Latch is
+    Port ( D : in  STD_LOGIC_VECTOR(3 downto 0);
+           L : in  STD_LOGIC :='1';
+           R : in  STD_LOGIC :='1';
+           CLK : in  STD_LOGIC;
+           Q : out  STD_LOGIC_VECTOR(3 downto 0));
+end component;
+
 -- State Declarations
 type state_type is (COL0, COL1, COL2);
 signal PS, NS : state_type;
 
 -- Intermediate Signal Declarations
-signal t_output : STD_LOGIC_VECTOR (3 downto 0);
+signal t_output, latchValue : STD_LOGIC_VECTOR (3 downto 0);
 signal t_valid : STD_LOGIC;
+signal t_latch : STD_LOGIC := '0';
 
 
 begin
 
-OUTPUT <= t_output;
+l1 : Latch PORT MAP(D => t_output,
+						  L => t_latch,
+						  R => '1',
+						  CLK => FCLK,
+						  Q => latchValue);
+
+OUTPUT <= latchValue;
 VALID <= t_valid;
 
 det_proc: process(PS, ROWS)
 begin
+			t_latch <= '1';
+
 			-- 1 pressed
 			if(ROWS = "1110" AND PS=COL0) then
 				t_valid <= '1';
@@ -95,6 +114,8 @@ begin
 			elsif(ROWS = "0111" AND PS=COL2) then
 				t_valid <= '1';
 				t_output <= "1011";
+			else
+				t_latch <= '0';
 			end if;
 
 end process det_proc;

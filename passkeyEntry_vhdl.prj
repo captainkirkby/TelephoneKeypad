@@ -1,3 +1,4 @@
+vhdl work "K:\Final Project\Latch.vhd"
 vhdl work "K:\Final Project\sseg_dec.vhd"
 vhdl work "K:\Final Project\my_clk_div.vhd"
 vhdl work "K:\Final Project\keypadDecoder.vhd"

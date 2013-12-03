@@ -47,6 +47,7 @@ end component;
 
 component keypadDecoder is
     Port ( ROWS : in  STD_LOGIC_VECTOR (3 downto 0);
+			  FCLK : in STD_LOGIC;
            CLK : in  STD_LOGIC;
 			  LEDS : out STD_LOGIC_VECTOR (2 downto 0);
            COLUMNS : out  STD_LOGIC_VECTOR (2 downto 0);
@@ -80,6 +81,7 @@ d2: my_clk_div PORT MAP(clk => CLK,
 								sclk => t2);
 								
 d3: keypadDecoder PORT MAP(ROWS => ROWS,
+									FCLK => CLK,
 									CLK => t2,
 									LEDS => LEDS,
 									COLUMNS => COLUMNS,

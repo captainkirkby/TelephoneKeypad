@@ -1,3 +1,4 @@
+vhdl work "Latch.vhd"
 vhdl work "sseg_dec.vhd"
 vhdl work "my_clk_div.vhd"
 vhdl work "keypadDecoder.vhd"

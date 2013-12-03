@@ -1,12 +1,12 @@
 Release 14.6 Drc P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Dec 03 14:31:20 2013
+Tue Dec 03 15:01:05 2013
 
 drc -z passkeyEntry.ncd passkeyEntry.pcf
 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net d3/t_output_or0000 is
-   sourced by a combinatorial pin. This is not good design practice. Use the CE
-   pin to control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net d3/t_latch is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 DRC detected 0 errors and 1 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
