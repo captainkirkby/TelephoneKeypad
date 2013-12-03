@@ -20,6 +20,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity keypadDecoder is
     Port ( ROWS : in  STD_LOGIC_VECTOR (2 downto 0);
            CLK : in  STD_LOGIC;
+			  LEDS : OUT STD_LOGIC_VECTOR (2 downto 0);
            COLUMNS : out  STD_LOGIC_VECTOR (3 downto 0);
            OUTPUT : out  STD_LOGIC_VECTOR (3 downto 0);
            VALID : out  STD_LOGIC);
@@ -56,14 +57,17 @@ begin
 		when COL0 => 
 			-- Column 0 is low
 			COLUMNS <= "011";
+			LEDS <= "100";
 
 		when COL1 =>
 			-- Column 1 is low
 			COLUMNS <= "101";
+			LEDS <= "010";
 
 		when COL2 =>
 			-- Column 2 is low
 			COLUMNS <= "110";
+			LEDS <= "001";
 
 	end case;
 end process comb_proc;
