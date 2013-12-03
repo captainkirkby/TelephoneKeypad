@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "K:/Final Project/KDTestBench_isim_beh.exe" -prj "K:/Final Project/KDTestBench_beh.prj" "work.KDTestBench" 

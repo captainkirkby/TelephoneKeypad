@@ -21,31 +21,63 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="FinalProject.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="KDTestBench_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="KDTestBench_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="KDTestBench_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="KDTestBench_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1386040339" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1386040339">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1386040339" xil_pn:in_ck="1849680193538614372" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1386040339">
+    <transform xil_pn:end_ts="1386040719" xil_pn:in_ck="-4526428456776377565" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1386040719">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
+      <outfile xil_pn:name="KDTestBench.vhd"/>
       <outfile xil_pn:name="keypadDecoder.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1386040339" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-9044832904953873877" xil_pn:start_ts="1386040339">
+    <transform xil_pn:end_ts="1386040459" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1095457152101718181" xil_pn:start_ts="1386040459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1386040339" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3418866178078708973" xil_pn:start_ts="1386040339">
+    <transform xil_pn:end_ts="1386040459" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-1942058388589105689" xil_pn:start_ts="1386040459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
     <transform xil_pn:end_ts="1386040339" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-3369314007747879585" xil_pn:start_ts="1386040339">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1386040719" xil_pn:in_ck="-4526428456776377565" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1386040719">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="KDTestBench.vhd"/>
+      <outfile xil_pn:name="keypadDecoder.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1386040739" xil_pn:in_ck="-4526428456776377565" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-2508252273565279572" xil_pn:start_ts="1386040719">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="KDTestBench_beh.prj"/>
+      <outfile xil_pn:name="KDTestBench_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1386040740" xil_pn:in_ck="-1618807504334508898" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6129833941853916985" xil_pn:start_ts="1386040739">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="KDTestBench_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
   </transforms>
 

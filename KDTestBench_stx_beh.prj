@@ -1,0 +1,2 @@
+vhdl isim_temp "keypadDecoder.vhd"
+vhdl isim_temp "KDTestBench.vhd"
