@@ -19,6 +19,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity passkeyEntry is
     Port ( ROWS : in  STD_LOGIC_VECTOR (3 downto 0);
            CLK : in  STD_LOGIC;
+			  BUZZ : out STD_LOGIC;
 			  HIGH : out STD_LOGIC;
 			  DETECTEDLED : out STD_LOGIC;
            LEDS : out  STD_LOGIC_VECTOR (2 downto 0);
@@ -62,11 +63,17 @@ component SequenceDetectorFSM is
            DETECTED : out  STD_LOGIC);
 end component;
 
+component buzzerWrapper is
+    Port ( CLK : in  STD_LOGIC;
+	        BTN : in  STD_LOGIC;
+           BUZZ : out  STD_LOGIC);
+end component;
+
 
 -- Intermediate Signal Declarations
 signal t8 : STD_LOGIC_VECTOR (7 downto 0);
 signal t4 : STD_LOGIC_VECTOR (3 downto 0);
-signal t1,t2 : STD_LOGIC;
+signal t1,t2,t3 : STD_LOGIC;
 
 begin
 
@@ -91,10 +98,16 @@ d3: keypadDecoder PORT MAP(ROWS => ROWS,
 
 d4: SequenceDetectorFSM PORT MAP(INPUT => t4,
                                  CLK => t2,
-											DETECTED => DETECTEDLED);
+											DETECTED => t3);
+
+d5: buzzerWrapper PORT MAP(CLK => CLK,
+									BTN => t3,
+									BUZZ => BUZZ);
 
 t8 <= "0000" & t4;
 HIGH <= '1';
+
+DETECTEDLED <= t3;
 
 LEDS <= "000";
 

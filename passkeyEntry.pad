@@ -1,7 +1,7 @@
 Release 14.6 - par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Dec 03 15:38:37 2013
+Tue Dec 03 17:58:22 2013
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -230,7 +230,7 @@ M14|COLUMNS<2>|IOB|IO_L05P_1|OUTPUT|LVCMOS25*|1|12|SLOW|NONE**|||LOCATED|NO|NONE
 M15|ROWS<3>|IBUF|IO_L07P_1|INPUT|LVCMOS25*|1||||NONE||LOCATED|NO|NONE|
 M16|HIGH|IOB|IO_L07N_1|OUTPUT|LVCMOS25*|1|12|SLOW|NONE**|||LOCATED|NO|NONE|
 M17|||VCCAUX||||||||2.5||||
-M18||DIFFS|IO_L08N_1|UNUSED||1|||||||||
+M18|BUZZ|IOB|IO_L08N_1|OUTPUT|LVCMOS25*|1|12|SLOW|NONE**|||LOCATED|NO|NONE|
 N1||IBUF|IP|UNUSED||3|||||||||
 N2||IBUF|IP|UNUSED||3|||||||||
 N3|||VCCO_3|||3|||||2.50||||

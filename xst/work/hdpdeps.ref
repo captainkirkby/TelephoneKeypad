@@ -1,45 +1,64 @@
-V3 29
-FL "K:/Final Project/FSM.vhd" 2013/12/03.15:25:52 P.68d
-EN work/SequenceDetectorFSM 1386113811 FL "K:/Final Project/FSM.vhd" \
+V3 41
+FL "K:/Final Project/buzzerWrapper.vhd" 2013/12/03.17:52:18 P.68d
+EN work/buzzerWrapper 1386122212 FL "K:/Final Project/buzzerWrapper.vhd" \
       PB ieee/std_logic_1164 1370735607
-AR work/SequenceDetectorFSM/Behavioral 1386113812 \
-      FL "K:/Final Project/FSM.vhd" EN work/SequenceDetectorFSM 1386113811
+AR work/buzzerWrapper/Behavioral 1386122213 \
+      FL "K:/Final Project/buzzerWrapper.vhd" EN work/buzzerWrapper 1386122212 \
+      CP buzz_clk_div CP count_clk_div
+FL "K:/Final Project/buzz_clk_div.vhd" 2013/12/03.17:52:00 P.68d
+EN work/buzz_clk_div 1386122194 FL "K:/Final Project/buzz_clk_div.vhd" \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609
+AR work/buzz_clk_div/buzz_clk_div 1386122195 \
+      FL "K:/Final Project/buzz_clk_div.vhd" EN work/buzz_clk_div 1386122194
+FL "K:/Final Project/count_clk_div.vhd" 2013/12/03.17:51:52 P.68d
+EN work/count_clk_div 1386122196 FL "K:/Final Project/count_clk_div.vhd" \
+      PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
+      PB ieee/STD_LOGIC_UNSIGNED 1370735609
+AR work/count_clk_div/count_clk_div 1386122197 \
+      FL "K:/Final Project/count_clk_div.vhd" EN work/count_clk_div 1386122196
+FL "K:/Final Project/FSM.vhd" 2013/12/03.17:50:54 P.68d
+EN work/SequenceDetectorFSM 1386122210 FL "K:/Final Project/FSM.vhd" \
+      PB ieee/std_logic_1164 1370735607
+AR work/SequenceDetectorFSM/Behavioral 1386122211 \
+      FL "K:/Final Project/FSM.vhd" EN work/SequenceDetectorFSM 1386122210
 FL "K:/Final Project/keypadDecoder.vhd" 2013/12/03.14:58:12 P.68d
-EN work/keypadDecoder 1386113809 FL "K:/Final Project/keypadDecoder.vhd" \
+EN work/keypadDecoder 1386122208 FL "K:/Final Project/keypadDecoder.vhd" \
       PB ieee/std_logic_1164 1370735607
-AR work/keypadDecoder/Behavioral 1386113810 \
-      FL "K:/Final Project/keypadDecoder.vhd" EN work/keypadDecoder 1386113809 \
+AR work/keypadDecoder/Behavioral 1386122209 \
+      FL "K:/Final Project/keypadDecoder.vhd" EN work/keypadDecoder 1386122208 \
       CP Latch
 FL "K:/Final Project/Latch.vhd" 2013/12/03.14:48:54 P.68d
-EN work/Latch 1386113799 FL "K:/Final Project/Latch.vhd" PB ieee/std_logic_1164 1370735607
-AR work/Latch/Behavioral 1386113800 \
-      FL "K:/Final Project/Latch.vhd" EN work/Latch 1386113799
+EN work/Latch 1386122198 FL "K:/Final Project/Latch.vhd" PB ieee/std_logic_1164 1370735607
+AR work/Latch/Behavioral 1386122199 \
+      FL "K:/Final Project/Latch.vhd" EN work/Latch 1386122198
 FL "K:/Final Project/my_clk_div.vhd" 2013/12/03.15:31:20 P.68d
-EN work/my_clk_div 1386113807 FL "K:/Final Project/my_clk_div.vhd" \
+EN work/my_clk_div 1386122206 FL "K:/Final Project/my_clk_div.vhd" \
       PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
       PB ieee/STD_LOGIC_UNSIGNED 1370735609
-AR work/my_clk_div/my_clk_div 1386113808 \
-      FL "K:/Final Project/my_clk_div.vhd" EN work/my_clk_div 1386113807
-FL "K:/Final Project/passkeyEntry.vhd" 2013/12/03.15:35:44 P.68d
-EN work/passkeyEntry 1386113813 FL "K:/Final Project/passkeyEntry.vhd" \
+AR work/my_clk_div/my_clk_div 1386122207 \
+      FL "K:/Final Project/my_clk_div.vhd" EN work/my_clk_div 1386122206
+FL "K:/Final Project/passkeyEntry.vhd" 2013/12/03.17:54:10 P.68d
+EN work/passkeyEntry 1386122214 FL "K:/Final Project/passkeyEntry.vhd" \
       PB ieee/std_logic_1164 1370735607
-AR work/passkeyEntry/Behavioral 1386113814 \
-      FL "K:/Final Project/passkeyEntry.vhd" EN work/passkeyEntry 1386113813 \
-      CP sseg_dec CP my_clk_div CP keypadDecoder CP SequenceDetectorFSM
+AR work/passkeyEntry/Behavioral 1386122215 \
+      FL "K:/Final Project/passkeyEntry.vhd" EN work/passkeyEntry 1386122214 \
+      CP sseg_dec CP my_clk_div CP keypadDecoder CP SequenceDetectorFSM \
+      CP buzzerWrapper
 FL "K:/Final Project/sseg_dec.vhd" 2013/12/03.11:06:24 P.68d
-EN work/sseg_dec 1386113801 FL "K:/Final Project/sseg_dec.vhd" \
+EN work/sseg_dec 1386122200 FL "K:/Final Project/sseg_dec.vhd" \
       PB ieee/std_logic_1164 1370735607 PB ieee/std_logic_arith 1370735608 \
       PB ieee/STD_LOGIC_UNSIGNED 1370735609
-AR work/sseg_dec/my_sseg 1386113802 \
-      FL "K:/Final Project/sseg_dec.vhd" EN work/sseg_dec 1386113801 \
+AR work/sseg_dec/my_sseg 1386122201 \
+      FL "K:/Final Project/sseg_dec.vhd" EN work/sseg_dec 1386122200 \
       CP bin2bcdconv CP clk_div
-EN work/bin2bcdconv 1386113803 \
+EN work/bin2bcdconv 1386122202 \
       FL "K:/Final Project/sseg_dec.vhd" PB ieee/std_logic_1164 1370735607 \
       PB ieee/std_logic_arith 1370735608 PB ieee/STD_LOGIC_UNSIGNED 1370735609
-AR work/bin2bcdconv/my_ckt 1386113804 \
-      FL "K:/Final Project/sseg_dec.vhd" EN work/bin2bcdconv 1386113803
-EN work/clk_div 1386113805 \
+AR work/bin2bcdconv/my_ckt 1386122203 \
+      FL "K:/Final Project/sseg_dec.vhd" EN work/bin2bcdconv 1386122202
+EN work/clk_div 1386122204 \
       FL "K:/Final Project/sseg_dec.vhd" PB ieee/std_logic_1164 1370735607 \
       PB ieee/std_logic_arith 1370735608 PB ieee/STD_LOGIC_UNSIGNED 1370735609
-AR work/clk_div/my_clk_div 1386113806 \
-      FL "K:/Final Project/sseg_dec.vhd" EN work/clk_div 1386113805
+AR work/clk_div/my_clk_div 1386122205 \
+      FL "K:/Final Project/sseg_dec.vhd" EN work/clk_div 1386122204

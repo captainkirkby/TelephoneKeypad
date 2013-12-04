@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">K:/Final Project/passkeyEntry.vhd</arg>&quot; line <arg fmt="%d" index="2">83</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LEDS</arg>&apos; of component &apos;<arg fmt="%s" index="4">keypadDecoder</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">K:/Final Project/passkeyEntry.vhd</arg>&quot; line <arg fmt="%d" index="2">90</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LEDS</arg>&apos; of component &apos;<arg fmt="%s" index="4">keypadDecoder</arg>&apos;.
 </msg>
 
 <msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">K:/Final Project/sseg_dec.vhd</arg>&quot; line <arg fmt="%d" index="2">129</arg>: Mux is complete : default of case is discarded
@@ -65,6 +65,72 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 
 <msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Correct_3</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">SequenceDetectorFSM</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
