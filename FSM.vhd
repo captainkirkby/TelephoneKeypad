@@ -12,6 +12,7 @@
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
 entity SequenceDetectorFSM is
@@ -23,11 +24,14 @@ end SequenceDetectorFSM;
 architecture Behavioral of SequenceDetectorFSM is
 
 -- State Declarations
-type state_type is (IDLE,A,B,C,D);
+type state_type is (IDLE,A,B,C,D, E);
 signal PS,NS : state_type;
 
 -- Intermediate Signal Declarations
-signal Correct : STD_LOGIC_VECTOR(3 downto 0) := "0000";
+signal Correct : STD_LOGIC_VECTOR(2 downto 0) := "000";
+
+-- Constant Declarations
+constant max_count : integer := (10000);
 
 begin
 
@@ -38,10 +42,12 @@ begin
 end process sync_proc;
 
 comb_proc: process(PS,INPUT)
+variable count : integer := (0);
 begin
 	case PS is
 		when IDLE => 
 		NS <= A;
+		DETECTED <= '0';
 		
 		when A =>
 		if(INPUT = "0001") then Correct(0) <= '1';
@@ -59,15 +65,24 @@ begin
 		NS <= D;
 		
 		when D =>
-		if(INPUT = "0100") then Correct(3) <= '1';
+		if(INPUT = "0100" AND Correct = "111") then
+			NS <= E;
+		else
+			NS <= IDLE;
 		end if;
-      NS <= IDLE;		
+		
+		when E =>
+		if(count < max_count) then
+			NS <= E;
+			count := count + 1;
+			DETECTED <= '1';
+		else
+			count := 0;
+			NS <= IDLE;
+		end if;
 	end case;
 		
 end process comb_proc;
-
-DETECTED <= '1' when (Correct = "1111") else
-            '0';
 
 
 end Behavioral;

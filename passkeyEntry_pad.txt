@@ -1,7 +1,7 @@
 Release 14.6 - par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Dec 03 17:58:22 2013
+Tue Dec 03 18:30:27 2013
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -175,7 +175,7 @@ Pinout by Pin Number:
 |J11       |           |         |GND                      |         |           |              |          |         |           |         |         |          |           |                |
 |J12       |           |DIFFM    |IO_L15P_1/A2             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |J13       |           |DIFFS    |IO_L15N_1/A1             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|J14       |DETECTEDLED|IOB      |IO_L14N_1/A3/RHCLK7      |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |
+|J14       |DETECTEDLED|IOB      |IO_L14N_1/A3/RHCLK7      |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |YES        |NONE            |
 |J15       |           |DIFFM    |IO_L14P_1/A4/RHCLK6      |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |J16       |           |DIFFS    |IO_L13N_1/A5/RHCLK5      |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |J17       |CATHODES<2>|IOB      |IO_L13P_1/A6/RHCLK4/IRDY1|OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |         |LOCATED   |NO         |NONE            |

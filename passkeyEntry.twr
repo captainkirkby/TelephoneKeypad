@@ -45,14 +45,14 @@ Clock CLK to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-BUZZ        |    8.285(R)|CLK_BUFGP         |   0.000|
-CATHODES<1> |   12.939(R)|CLK_BUFGP         |   0.000|
-CATHODES<2> |   13.614(R)|CLK_BUFGP         |   0.000|
-CATHODES<3> |   13.356(R)|CLK_BUFGP         |   0.000|
-CATHODES<4> |   14.191(R)|CLK_BUFGP         |   0.000|
-CATHODES<5> |   14.297(R)|CLK_BUFGP         |   0.000|
-CATHODES<6> |   13.611(R)|CLK_BUFGP         |   0.000|
-CATHODES<7> |   13.968(R)|CLK_BUFGP         |   0.000|
+BUZZ        |    8.567(R)|CLK_BUFGP         |   0.000|
+CATHODES<1> |   12.476(R)|CLK_BUFGP         |   0.000|
+CATHODES<2> |   13.132(R)|CLK_BUFGP         |   0.000|
+CATHODES<3> |   13.368(R)|CLK_BUFGP         |   0.000|
+CATHODES<4> |   13.446(R)|CLK_BUFGP         |   0.000|
+CATHODES<5> |   13.748(R)|CLK_BUFGP         |   0.000|
+CATHODES<6> |   13.107(R)|CLK_BUFGP         |   0.000|
+CATHODES<7> |   13.717(R)|CLK_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK
@@ -60,11 +60,11 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    5.480|         |         |         |
-ROWS<0>        |    3.444|    4.708|         |         |
-ROWS<1>        |    3.281|    4.708|         |         |
-ROWS<2>        |    2.638|    4.708|         |         |
-ROWS<3>        |    3.564|    4.708|         |         |
+CLK            |    5.361|         |         |         |
+ROWS<0>        |    3.082|    4.101|         |         |
+ROWS<1>        |    2.899|    4.101|         |         |
+ROWS<2>        |    2.995|    4.101|         |         |
+ROWS<3>        |    3.896|    4.101|         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ROWS<0>
@@ -72,10 +72,10 @@ Clock to Setup on destination clock ROWS<0>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ROWS<0>        |         |         |    0.936|    0.936|
-ROWS<1>        |         |         |    0.775|    0.775|
-ROWS<2>        |         |         |   -0.536|   -0.536|
-ROWS<3>        |         |         |    1.047|    1.047|
+ROWS<0>        |         |         |    1.883|    1.883|
+ROWS<1>        |         |         |    0.861|    0.861|
+ROWS<2>        |         |         |    0.822|    0.822|
+ROWS<3>        |         |         |    1.668|    1.668|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ROWS<1>
@@ -83,10 +83,10 @@ Clock to Setup on destination clock ROWS<1>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ROWS<0>        |         |         |    1.067|    1.067|
-ROWS<1>        |         |         |    0.906|    0.906|
-ROWS<2>        |         |         |   -0.405|   -0.405|
-ROWS<3>        |         |         |    1.178|    1.178|
+ROWS<0>        |         |         |    2.030|    2.030|
+ROWS<1>        |         |         |    1.008|    1.008|
+ROWS<2>        |         |         |    0.969|    0.969|
+ROWS<3>        |         |         |    1.815|    1.815|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ROWS<2>
@@ -94,10 +94,10 @@ Clock to Setup on destination clock ROWS<2>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ROWS<0>        |         |         |    1.581|    1.581|
-ROWS<1>        |         |         |    1.420|    1.420|
-ROWS<2>        |         |         |    0.109|    0.109|
-ROWS<3>        |         |         |    1.692|    1.692|
+ROWS<0>        |         |         |    1.953|    1.953|
+ROWS<1>        |         |         |    0.931|    0.931|
+ROWS<2>        |         |         |    0.892|    0.892|
+ROWS<3>        |         |         |    1.738|    1.738|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ROWS<3>
@@ -105,21 +105,21 @@ Clock to Setup on destination clock ROWS<3>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ROWS<0>        |         |         |    0.840|    0.840|
-ROWS<1>        |         |         |    0.679|    0.679|
-ROWS<2>        |         |         |   -0.632|   -0.632|
-ROWS<3>        |         |         |    0.951|    0.951|
+ROWS<0>        |         |         |    1.233|    1.233|
+ROWS<1>        |         |         |    0.211|    0.211|
+ROWS<2>        |         |         |    0.172|    0.172|
+ROWS<3>        |         |         |    1.018|    1.018|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Dec 03 17:58:37 2013 
+Analysis completed Tue Dec 03 18:30:44 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 166 MB
+Peak Memory Usage: 168 MB
 
 
 
