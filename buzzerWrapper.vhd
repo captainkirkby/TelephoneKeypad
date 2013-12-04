@@ -16,7 +16,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity buzzerWrapper is
     Port ( CLK : in  STD_LOGIC;
-	        BTN : in  STD_LOGIC;
+	        FINISHED : in  STD_LOGIC;
+			  DETECTED : in STD_LOGIC;
            BUZZ : out  STD_LOGIC);
 end buzzerWrapper;
 
@@ -35,7 +36,7 @@ component count_clk_div is
 end component;
 
 -- state declaration
-type state_type is (IDLE, PLAYING1, PLAYING2, PLAYING3);
+type state_type is (IDLE, PLAYING1, PLAYING2, PLAYING3, b_PLAYING1, b_PLAYING2, b_PLAYING3);
 signal PS, NS: state_type;
 
 -- intermediate signal declaration
@@ -79,12 +80,13 @@ begin
 	end if;
 end process seq_proc;
 
-comb_proc: process(PS, BTN)
+comb_proc: process(PS, FINISHED)
 begin
 	case PS is
 		when IDLE =>
 			td <= "0000000000000001";
-			if(BTN = '1') then NS <= PLAYING1;
+			if(FINISHED = '1' AND DETECTED = '1') then NS <= PLAYING1;
+			elsif(FINISHED = '1' AND DETECTED = '0') then NS <= b_PLAYING1;
 			else NS <= IDLE;
 			end if;
 		when PLAYING1 =>
@@ -94,6 +96,16 @@ begin
 			td <= "1001010000110000";
 			NS <= PLAYING3;
 		when PLAYING3 =>
+			td <= "1101110111110010";
+			NS <= IDLE;
+			
+		when b_PLAYING1 =>
+			td <= "1101110111110010";
+			NS <= b_PLAYING2;
+		when b_PLAYING2 =>
+			td <= "1001110100000000";
+			NS <= b_PLAYING3;
+		when b_PLAYING3 =>
 			td <= "1101110111110010";
 			NS <= IDLE;
 	end case;

@@ -60,12 +60,14 @@ end component;
 component SequenceDetectorFSM is
     Port ( INPUT : in  STD_LOGIC_VECTOR(3 downto 0);
            CLK : in  STD_LOGIC;
+			  FINISHED : out STD_LOGIC;
            DETECTED : out  STD_LOGIC);
 end component;
 
 component buzzerWrapper is
     Port ( CLK : in  STD_LOGIC;
-	        BTN : in  STD_LOGIC;
+	        FINISHED : in  STD_LOGIC;
+			  DETECTED : in STD_LOGIC;
            BUZZ : out  STD_LOGIC);
 end component;
 
@@ -73,7 +75,7 @@ end component;
 -- Intermediate Signal Declarations
 signal t8 : STD_LOGIC_VECTOR (7 downto 0);
 signal t4 : STD_LOGIC_VECTOR (3 downto 0);
-signal t1,t2,t3 : STD_LOGIC;
+signal t1,t2,t3,t5 : STD_LOGIC;
 
 begin
 
@@ -98,10 +100,12 @@ d3: keypadDecoder PORT MAP(ROWS => ROWS,
 
 d4: SequenceDetectorFSM PORT MAP(INPUT => t4,
                                  CLK => t2,
+											FINISHED => t5,
 											DETECTED => t3);
 
 d5: buzzerWrapper PORT MAP(CLK => CLK,
-									BTN => t3,
+									FINISHED => t5,
+									DETECTED => t3,
 									BUZZ => BUZZ);
 
 t8 <= "0000" & t4;

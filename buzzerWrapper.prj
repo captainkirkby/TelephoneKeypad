@@ -1,0 +1,3 @@
+vhdl work "count_clk_div.vhd"
+vhdl work "buzz_clk_div.vhd"
+vhdl work "buzzerWrapper.vhd"

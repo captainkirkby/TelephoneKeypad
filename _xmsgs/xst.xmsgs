@@ -5,137 +5,144 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="753" delta="old" >&quot;<arg fmt="%s" index="1">K:/Final Project/passkeyEntry.vhd</arg>&quot; line <arg fmt="%d" index="2">90</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LEDS</arg>&apos; of component &apos;<arg fmt="%s" index="4">keypadDecoder</arg>&apos;.
+<msg type="warning" file="Xst" num="753" delta="new" >&quot;<arg fmt="%s" index="1">K:/Final Project/passkeyEntry.vhd</arg>&quot; line <arg fmt="%d" index="2">92</arg>: Unconnected output port &apos;<arg fmt="%s" index="3">LEDS</arg>&apos; of component &apos;<arg fmt="%s" index="4">keypadDecoder</arg>&apos;.
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">K:/Final Project/sseg_dec.vhd</arg>&quot; line <arg fmt="%d" index="2">129</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">K:/Final Project/sseg_dec.vhd</arg>&quot; line <arg fmt="%d" index="2">129</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="1561" delta="old" >&quot;<arg fmt="%s" index="1">K:/Final Project/sseg_dec.vhd</arg>&quot; line <arg fmt="%d" index="2">137</arg>: Mux is complete : default of case is discarded
+<msg type="info" file="Xst" num="1561" delta="new" >&quot;<arg fmt="%s" index="1">K:/Final Project/sseg_dec.vhd</arg>&quot; line <arg fmt="%d" index="2">137</arg>: Mux is complete : default of case is discarded
 </msg>
 
-<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">t_valid</arg>&gt; in unit &lt;<arg fmt="%s" index="2">keypadDecoder</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">t_valid</arg>&gt; in unit &lt;<arg fmt="%s" index="2">keypadDecoder</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">K:/Final Project/FSM.vhd</arg>&quot; line <arg fmt="%d" index="2">44</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">K:/Final Project/FSM.vhd</arg>&quot; line <arg fmt="%d" index="2">45</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
 <arg fmt="%s" index="3">&lt;Correct&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">32</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">count</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="info" file="Xst" num="2679" delta="new" >Register &lt;<arg fmt="%s" index="1">FINISHED</arg>&gt; in unit &lt;<arg fmt="%s" index="2">SequenceDetectorFSM</arg>&gt; has a constant value of <arg fmt="%s" index="3">1</arg> during circuit operation. The register is replaced by logic.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Correct_0</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="819" delta="new" >&quot;<arg fmt="%s" index="1">K:/Final Project/buzzerWrapper.vhd</arg>&quot; line <arg fmt="%d" index="2">83</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;DETECTED&gt;</arg>
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Correct_1</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">32</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">count</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Correct_2</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Correct_0</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DETECTED</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Correct_1</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">Correct_2</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">4</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">t_output</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">DETECTED</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
-<msg type="info" file="Xst" num="2371" delta="old" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+<msg type="info" file="Xst" num="2371" delta="new" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Correct_0</arg>.
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">4</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">t_output</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="new" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Correct_0</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Correct_1</arg>.
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Correct_1</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Correct_2</arg>.
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">Correct_2</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Correct_0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">SequenceDetectorFSM</arg>.
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">Correct_0</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">SequenceDetectorFSM</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Correct_1</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">SequenceDetectorFSM</arg>.
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">Correct_1</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">SequenceDetectorFSM</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">Correct_2</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">SequenceDetectorFSM</arg>.
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">Correct_2</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">SequenceDetectorFSM</arg>.
 You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d2/div_cnt_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">d5/d1/div_cnt_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">passkeyEntry</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

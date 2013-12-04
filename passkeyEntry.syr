@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total CPU time to Xst completion: 0.67 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.36 secs
+Total CPU time to Xst completion: 0.67 secs
  
 --> Reading design: passkeyEntry.prj
 
@@ -119,12 +119,12 @@ Architecture my_clk_div of Entity my_clk_div is up to date.
 Compiling vhdl file "K:/Final Project/keypadDecoder.vhd" in Library work.
 Architecture behavioral of Entity keypaddecoder is up to date.
 Compiling vhdl file "K:/Final Project/FSM.vhd" in Library work.
-Entity <sequencedetectorfsm> compiled.
-Entity <sequencedetectorfsm> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity sequencedetectorfsm is up to date.
 Compiling vhdl file "K:/Final Project/buzzerWrapper.vhd" in Library work.
 Architecture behavioral of Entity buzzerwrapper is up to date.
 Compiling vhdl file "K:/Final Project/passkeyEntry.vhd" in Library work.
-Architecture behavioral of Entity passkeyentry is up to date.
+Entity <passkeyentry> compiled.
+Entity <passkeyentry> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -156,7 +156,7 @@ Analyzing hierarchy for entity <count_clk_div> in library <work> (architecture <
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <passkeyEntry> in library <work> (Architecture <behavioral>).
-WARNING:Xst:753 - "K:/Final Project/passkeyEntry.vhd" line 90: Unconnected output port 'LEDS' of component 'keypadDecoder'.
+WARNING:Xst:753 - "K:/Final Project/passkeyEntry.vhd" line 92: Unconnected output port 'LEDS' of component 'keypadDecoder'.
 Entity <passkeyEntry> analyzed. Unit <passkeyEntry> generated.
 
 Analyzing Entity <sseg_dec> in library <work> (Architecture <my_sseg>).
@@ -181,11 +181,14 @@ Analyzing Entity <Latch> in library <work> (Architecture <behavioral>).
 Entity <Latch> analyzed. Unit <Latch> generated.
 
 Analyzing Entity <SequenceDetectorFSM> in library <work> (Architecture <behavioral>).
-WARNING:Xst:819 - "K:/Final Project/FSM.vhd" line 44: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "K:/Final Project/FSM.vhd" line 45: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <Correct>
+INFO:Xst:2679 - Register <FINISHED> in unit <SequenceDetectorFSM> has a constant value of 1 during circuit operation. The register is replaced by logic.
 Entity <SequenceDetectorFSM> analyzed. Unit <SequenceDetectorFSM> generated.
 
 Analyzing Entity <buzzerWrapper> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "K:/Final Project/buzzerWrapper.vhd" line 83: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <DETECTED>
 Entity <buzzerWrapper> analyzed. Unit <buzzerWrapper> generated.
 
 Analyzing Entity <buzz_clk_div> in library <work> (Architecture <buzz_clk_div>).
@@ -215,10 +218,10 @@ Synthesizing Unit <SequenceDetectorFSM>.
     Related source file is "K:/Final Project/FSM.vhd".
     Found finite state machine <FSM_0> for signal <PS>.
     -----------------------------------------------------------------------
-    | States             | 6                                              |
-    | Transitions        | 9                                              |
+    | States             | 7                                              |
+    | Transitions        | 10                                             |
     | Inputs             | 3                                              |
-    | Outputs            | 6                                              |
+    | Outputs            | 7                                              |
     | Clock              | CLK                       (rising_edge)        |
     | Power Up State     | idle                                           |
     | Encoding           | automatic                                      |
@@ -230,9 +233,9 @@ WARNING:Xst:737 - Found 1-bit latch for signal <Correct_1>. Latches may be gener
 WARNING:Xst:737 - Found 1-bit latch for signal <Correct_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <DETECTED>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 32-bit adder for signal <count$addsub0000> created at line 77.
-    Found 32-bit comparator greatequal for signal <DETECTED$cmp_ge0000> created at line 75.
-    Found 32-bit comparator less for signal <PS$cmp_lt0000> created at line 75.
+    Found 32-bit adder for signal <count$addsub0000> created at line 78.
+    Found 32-bit comparator greatequal for signal <DETECTED$cmp_ge0000> created at line 76.
+    Found 32-bit comparator less for signal <PS$cmp_lt0000> created at line 76.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred   1 Adder/Subtractor(s).
@@ -392,9 +395,9 @@ Synthesizing Unit <buzzerWrapper>.
     Related source file is "K:/Final Project/buzzerWrapper.vhd".
     Found finite state machine <FSM_2> for signal <PS>.
     -----------------------------------------------------------------------
-    | States             | 4                                              |
-    | Transitions        | 5                                              |
-    | Inputs             | 1                                              |
+    | States             | 7                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
     | Outputs            | 16                                             |
     | Clock              | t1                        (rising_edge)        |
     | Power Up State     | idle                                           |
@@ -447,15 +450,18 @@ Macro Statistics
 =========================================================================
 
 Analyzing FSM <FSM_2> for best encoding.
-Optimizing FSM <d5/PS/FSM> on signal <PS[1:2]> with user encoding.
-----------------------
- State    | Encoding
-----------------------
- idle     | 00
- playing1 | 01
- playing2 | 10
- playing3 | 11
-----------------------
+Optimizing FSM <d5/PS/FSM> on signal <PS[1:7]> with one-hot encoding.
+------------------------
+ State      | Encoding
+------------------------
+ idle       | 0000001
+ playing1   | 0000010
+ playing2   | 0001000
+ playing3   | 0010000
+ b_playing1 | 0000100
+ b_playing2 | 0100000
+ b_playing3 | 1000000
+------------------------
 Analyzing FSM <FSM_1> for best encoding.
 Optimizing FSM <d3/PS/FSM> on signal <PS[1:3]> with one-hot encoding.
 -------------------
@@ -466,16 +472,17 @@ Optimizing FSM <d3/PS/FSM> on signal <PS[1:3]> with one-hot encoding.
  col2  | 100
 -------------------
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <d4/PS/FSM> on signal <PS[1:6]> with one-hot encoding.
+Optimizing FSM <d4/PS/FSM> on signal <PS[1:7]> with one-hot encoding.
 -------------------
  State | Encoding
 -------------------
- idle  | 000001
- a     | 000010
- b     | 000100
- c     | 001000
- d     | 010000
- e     | 100000
+ idle  | 0000001
+ a     | 0000010
+ b     | 0000100
+ c     | 0001000
+ d     | 0010000
+ e_d   | 0100000
+ e_nd  | 1000000
 -------------------
 WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block Correct_0.
    You should achieve better results by setting this init to 1.
@@ -569,8 +576,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 127
- Flip-Flops                                            : 127
+# Registers                                            : 133
+ Flip-Flops                                            : 133
 
 =========================================================================
 
@@ -599,22 +606,22 @@ Design Statistics
 # IOs                              : 26
 
 Cell Usage :
-# BELS                             : 586
+# BELS                             : 590
 #      GND                         : 1
 #      INV                         : 15
 #      LUT1                        : 136
-#      LUT2                        : 43
-#      LUT3                        : 10
-#      LUT4                        : 61
-#      MUXCY                       : 175
+#      LUT2                        : 46
+#      LUT3                        : 11
+#      LUT4                        : 60
+#      MUXCY                       : 176
 #      MUXF5                       : 6
 #      VCC                         : 1
 #      XORCY                       : 138
-# FlipFlops/Latches                : 168
-#      FD                          : 11
+# FlipFlops/Latches                : 174
+#      FD                          : 15
 #      FDE                         : 8
-#      FDR                         : 107
-#      FDRS                        : 1
+#      FDR                         : 108
+#      FDS                         : 2
 #      LD                          : 38
 #      LDE                         : 3
 # Clock Buffers                    : 2
@@ -630,9 +637,9 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                      139  out of   4656     2%  
- Number of Slice Flip Flops:            167  out of   9312     1%  
- Number of 4 input LUTs:                265  out of   9312     2%  
+ Number of Slices:                      141  out of   4656     3%  
+ Number of Slice Flip Flops:            173  out of   9312     1%  
+ Number of 4 input LUTs:                268  out of   9312     2%  
  Number of IOs:                          26
  Number of bonded IOBs:                  26  out of    232    11%  
     IOB Flip Flops:                       1
@@ -660,9 +667,9 @@ Clock Information:
 Clock Signal                                       | Clock buffer(FF name)  | Load  |
 ---------------------------------------------------+------------------------+-------+
 CLK                                                | BUFGP                  | 114   |
-d5/d2/tmp_clk                                      | NONE(d5/PS_FSM_FFd1)   | 2     |
-d4/PS_FSM_FFd11                                    | BUFG                   | 32    |
-d2/tmp_clk                                         | NONE(d4/PS_FSM_FFd2)   | 9     |
+d5/d2/tmp_clk                                      | NONE(d5/PS_FSM_FFd6)   | 7     |
+d4/PS_FSM_FFd21                                    | BUFG                   | 32    |
+d2/tmp_clk                                         | NONE(d4/PS_FSM_FFd3)   | 10    |
 d4/Correct_0_cmp_eq0000(d4/Correct_0_cmp_eq00001:O)| NONE(*)(d4/Correct_0)  | 1     |
 d4/Correct_1_cmp_eq0000(d4/Correct_1_cmp_eq00001:O)| NONE(*)(d4/Correct_1)  | 1     |
 d4/Correct_2_cmp_eq0000(d4/Correct_2_cmp_eq00001:O)| NONE(*)(d4/Correct_2)  | 1     |
@@ -725,35 +732,35 @@ Delay:               5.240ns (Levels of Logic = 9)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'd5/d2/tmp_clk'
   Clock period: 2.535ns (frequency: 394.477MHz)
-  Total number of paths / destination ports: 4 / 3
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
 Delay:               2.535ns (Levels of Logic = 1)
-  Source:            d5/PS_FSM_FFd2 (FF)
-  Destination:       d5/PS_FSM_FFd1 (FF)
+  Source:            d5/PS_FSM_FFd7 (FF)
+  Destination:       d5/PS_FSM_FFd6 (FF)
   Source Clock:      d5/d2/tmp_clk rising
   Destination Clock: d5/d2/tmp_clk rising
 
-  Data Path: d5/PS_FSM_FFd2 to d5/PS_FSM_FFd1
+  Data Path: d5/PS_FSM_FFd7 to d5/PS_FSM_FFd6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRS:C->Q             8   0.591   0.932  d5/PS_FSM_FFd2 (d5/PS_FSM_FFd2)
-     LUT2:I0->O            1   0.704   0.000  d5/PS_FSM_FFd1-In1 (d5/PS_FSM_FFd1-In)
-     FD:D                      0.308          d5/PS_FSM_FFd1
+     FDS:C->Q              8   0.591   0.932  d5/PS_FSM_FFd7 (d5/PS_FSM_FFd7)
+     LUT2:I0->O            1   0.704   0.000  d5/PS_FSM_FFd6-In1 (d5/PS_FSM_FFd6-In)
+     FD:D                      0.308          d5/PS_FSM_FFd6
     ----------------------------------------
     Total                      2.535ns (1.603ns logic, 0.932ns route)
                                        (63.2% logic, 36.8% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'd4/PS_FSM_FFd11'
+Timing constraint: Default period analysis for Clock 'd4/PS_FSM_FFd21'
   Clock period: 6.465ns (frequency: 154.679MHz)
   Total number of paths / destination ports: 1424 / 32
 -------------------------------------------------------------------------
 Delay:               6.465ns (Levels of Logic = 33)
   Source:            d4/count_1 (LATCH)
   Destination:       d4/count_31 (LATCH)
-  Source Clock:      d4/PS_FSM_FFd11 falling
-  Destination Clock: d4/PS_FSM_FFd11 falling
+  Source Clock:      d4/PS_FSM_FFd21 falling
+  Destination Clock: d4/PS_FSM_FFd21 falling
 
   Data Path: d4/count_1 to d4/count_31
                                 Gate     Net
@@ -801,21 +808,21 @@ Delay:               6.465ns (Levels of Logic = 33)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'd2/tmp_clk'
   Clock period: 2.411ns (frequency: 414.766MHz)
-  Total number of paths / destination ports: 11 / 9
+  Total number of paths / destination ports: 12 / 11
 -------------------------------------------------------------------------
 Delay:               2.411ns (Levels of Logic = 1)
-  Source:            d4/PS_FSM_FFd1 (FF)
-  Destination:       d4/PS_FSM_FFd6 (FF)
+  Source:            d4/PS_FSM_FFd2 (FF)
+  Destination:       d4/PS_FSM_FFd7 (FF)
   Source Clock:      d2/tmp_clk rising
   Destination Clock: d2/tmp_clk rising
 
-  Data Path: d4/PS_FSM_FFd1 to d4/PS_FSM_FFd6
+  Data Path: d4/PS_FSM_FFd2 to d4/PS_FSM_FFd7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               5   0.591   0.808  d4/PS_FSM_FFd1 (d4/PS_FSM_FFd11)
-     LUT4:I0->O            1   0.704   0.000  d4/PS_FSM_FFd6-In11 (d4/PS_FSM_FFd6-In)
-     FD:D                      0.308          d4/PS_FSM_FFd6
+     FD:C->Q               5   0.591   0.808  d4/PS_FSM_FFd2 (d4/PS_FSM_FFd21)
+     LUT2:I0->O            1   0.704   0.000  d4/PS_FSM_FFd7-In11 (d4/PS_FSM_FFd7-In1)
+     FDS:D                     0.308          d4/PS_FSM_FFd7
     ----------------------------------------
     Total                      2.411ns (1.603ns logic, 0.808ns route)
                                        (66.5% logic, 33.5% route)
@@ -856,7 +863,7 @@ Offset:              5.369ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             8   1.218   0.932  ROWS_3_IBUF (ROWS_3_IBUF)
-     LUT4:I0->O            1   0.704   0.499  d3/t_latch_SW0 (N5)
+     LUT4:I0->O            1   0.704   0.499  d3/t_latch_SW0 (N4)
      LUT4:I1->O            8   0.704   0.757  d3/t_latch (d3/t_latch)
      FDE:CE                    0.555          d3/l1/Q_0
     ----------------------------------------
@@ -877,9 +884,9 @@ Offset:              5.892ns (Levels of Logic = 5)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             7   1.218   0.883  ROWS_0_IBUF (ROWS_0_IBUF)
-     LUT4:I0->O            1   0.704   0.000  d3/t_output_mux0011<1>51_F (N37)
+     LUT4:I0->O            1   0.704   0.000  d3/t_output_mux0011<1>51_F (N36)
      MUXF5:I0->O           1   0.321   0.455  d3/t_output_mux0011<1>51 (d3/t_output_mux0011<1>51)
-     LUT3:I2->O            1   0.704   0.595  d3/t_output_mux0011<1>68_SW0 (N25)
+     LUT3:I2->O            1   0.704   0.595  d3/t_output_mux0011<1>68_SW0 (N24)
      LUT4:I0->O            1   0.704   0.000  d3/t_output_mux0011<1>68 (d3/t_output_mux0011<1>)
      LD:D                      0.308          d3/t_output_1
     ----------------------------------------
@@ -973,13 +980,13 @@ Offset:              5.920ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 37.00 secs
-Total CPU time to Xst completion: 36.93 secs
+Total CPU time to Xst completion: 37.34 secs
  
 --> 
 
-Total memory usage is 303856 kilobytes
+Total memory usage is 304112 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   36 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
 

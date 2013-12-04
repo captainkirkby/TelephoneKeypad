@@ -1,0 +1,47 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to K:/Final Project/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.59 secs
+ 
+--> Parameter xsthdpdir set to K:/Final Project/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.59 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3516 - Found error in file "K:/Final Project/buzzerWrapper.vhd". 
+WARNING:HDLParsers:3458 - Because of erroneous VHDL file(s), automatic determination of correct order of compilation of files in project file "K:/Final Project/buzzerWrapper_vhdl.prj" may be inaccurate. Please put the files in the project file in correct order with keyword 'nosort' at end of the project file, or compile your vhdl file(s) individually to find and fix the error(s) in your vhdl file(s). 
+Compiling vhdl file "K:/Final Project/buzz_clk_div.vhd" in Library work.
+Architecture buzz_clk_div of Entity buzz_clk_div is up to date.
+Compiling vhdl file "K:/Final Project/count_clk_div.vhd" in Library work.
+Architecture count_clk_div of Entity count_clk_div is up to date.
+Compiling vhdl file "K:/Final Project/buzzerWrapper.vhd" in Library work.
+Entity <buzzerwrapper> compiled.
+ERROR:HDLParsers:164 - "K:/Final Project/buzzerWrapper.vhd" Line 92. parse error, unexpected WHEN, expecting END
+ERROR:HDLParsers:164 - "K:/Final Project/buzzerWrapper.vhd" Line 95. parse error, unexpected WHEN, expecting END
+ERROR:HDLParsers:164 - "K:/Final Project/buzzerWrapper.vhd" Line 98. parse error, unexpected WHEN, expecting END
+ERROR:HDLParsers:164 - "K:/Final Project/buzzerWrapper.vhd" Line 102. parse error, unexpected WHEN, expecting END
+ERROR:HDLParsers:164 - "K:/Final Project/buzzerWrapper.vhd" Line 105. parse error, unexpected WHEN, expecting END
+ERROR:HDLParsers:164 - "K:/Final Project/buzzerWrapper.vhd" Line 108. parse error, unexpected WHEN, expecting END
+ERROR:HDLParsers:164 - "K:/Final Project/buzzerWrapper.vhd" Line 111. parse error, unexpected CASE, expecting IF
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.05 secs
+ 
+--> 
+
+Total memory usage is 209364 kilobytes
+
+Number of errors   :    7 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

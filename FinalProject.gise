@@ -22,6 +22,7 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="FinalProject.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="KDTestBench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="KDTestBench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="KDTestBench_isim_beh.wdb"/>
@@ -33,6 +34,9 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="buzzerWrapper.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="buzzerWrapper.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="buzzerWrapper.xst"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
@@ -173,12 +177,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1386124134" xil_pn:in_ck="6604000459867468087" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5361412106831918810" xil_pn:start_ts="1386124087">
+    <transform xil_pn:end_ts="1386125131" xil_pn:in_ck="6604000459867468087" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5361412106831918810" xil_pn:start_ts="1386125082">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name=".lso"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="passkeyEntry.lso"/>
       <outfile xil_pn:name="passkeyEntry.ngc"/>
@@ -196,7 +201,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1386124155" xil_pn:in_ck="-3164255693606285028" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-123881609982776214" xil_pn:start_ts="1386124134">
+    <transform xil_pn:end_ts="1386125153" xil_pn:in_ck="-3164255693606285028" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-123881609982776214" xil_pn:start_ts="1386125131">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -205,10 +210,12 @@
       <outfile xil_pn:name="passkeyEntry.ngd"/>
       <outfile xil_pn:name="passkeyEntry_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1386124177" xil_pn:in_ck="-3164255693606285027" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1386124155">
+    <transform xil_pn:end_ts="1386125176" xil_pn:in_ck="-3164255693606285027" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1386125153">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="passkeyEntry.pcf"/>
       <outfile xil_pn:name="passkeyEntry_map.map"/>
@@ -219,7 +226,7 @@
       <outfile xil_pn:name="passkeyEntry_summary.xml"/>
       <outfile xil_pn:name="passkeyEntry_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1386124247" xil_pn:in_ck="8530267340604516022" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1386124177">
+    <transform xil_pn:end_ts="1386125246" xil_pn:in_ck="8530267340604516022" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1386125176">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -234,7 +241,7 @@
       <outfile xil_pn:name="passkeyEntry_pad.txt"/>
       <outfile xil_pn:name="passkeyEntry_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1386124275" xil_pn:in_ck="535323423823540277" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1386124247">
+    <transform xil_pn:end_ts="1386125275" xil_pn:in_ck="535323423823540277" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1386125246">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -247,7 +254,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1386124247" xil_pn:in_ck="-3164255693606285159" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1386124235">
+    <transform xil_pn:end_ts="1386125246" xil_pn:in_ck="-3164255693606285159" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1386125234">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

@@ -18,13 +18,14 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 entity SequenceDetectorFSM is
     Port ( INPUT : in  STD_LOGIC_VECTOR(3 downto 0);
            CLK : in  STD_LOGIC;
+			  FINISHED : out STD_LOGIC;
            DETECTED : out  STD_LOGIC);
 end SequenceDetectorFSM;
 
 architecture Behavioral of SequenceDetectorFSM is
 
 -- State Declarations
-type state_type is (IDLE,A,B,C,D, E);
+type state_type is (IDLE,A,B,C,D, E_d, E_nd);
 signal PS,NS : state_type;
 
 -- Intermediate Signal Declarations
@@ -66,20 +67,27 @@ begin
 		
 		when D =>
 		if(INPUT = "0100" AND Correct = "111") then
-			NS <= E;
+			NS <= E_d;
 		else
-			NS <= IDLE;
+			NS <= E_nd;
 		end if;
 		
-		when E =>
+		when E_d =>
 		if(count < max_count) then
-			NS <= E;
+			NS <= E_d;
 			count := count + 1;
+			FINISHED <= '1';
 			DETECTED <= '1';
 		else
 			count := 0;
 			NS <= IDLE;
 		end if;
+		
+		when E_nd =>
+			NS <= IDLE;
+			FINISHED <= '1';
+			DETECTED <= '0';
+			
 	end case;
 		
 end process comb_proc;
