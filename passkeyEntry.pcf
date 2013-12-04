@@ -1,9 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.68d on Tue Dec 03 15:37:46 2013
+// Written by: Map P.68d on Tue Dec 03 17:28:48 2013
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "DETECTEDLED" LOCATE = SITE "J14" LEVEL 1;
 COMP "CATHODES<0>" LOCATE = SITE "C17" LEVEL 1;
 COMP "CATHODES<1>" LOCATE = SITE "H14" LEVEL 1;
 COMP "CATHODES<2>" LOCATE = SITE "J17" LEVEL 1;
@@ -12,6 +11,7 @@ COMP "CATHODES<4>" LOCATE = SITE "D16" LEVEL 1;
 COMP "CATHODES<5>" LOCATE = SITE "D17" LEVEL 1;
 COMP "CATHODES<6>" LOCATE = SITE "F18" LEVEL 1;
 COMP "CATHODES<7>" LOCATE = SITE "L18" LEVEL 1;
+COMP "BUZZER" LOCATE = SITE "M18" LEVEL 1;
 COMP "ROWS<0>" LOCATE = SITE "L15" LEVEL 1;
 COMP "ROWS<1>" LOCATE = SITE "K12" LEVEL 1;
 COMP "LEDS<0>" LOCATE = SITE "E17" LEVEL 1;

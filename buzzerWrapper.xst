@@ -1,0 +1,5 @@
+set -tmpdir "K:/Final Project/xst/projnav.tmp"
+set -xsthdpdir "K:/Final Project/xst"
+elaborate
+-ifn buzzerWrapper.prj
+-ifmt mixed

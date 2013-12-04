@@ -1,0 +1,44 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to K:/Final Project/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.62 secs
+ 
+--> Parameter xsthdpdir set to K:/Final Project/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.64 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "K:/Final Project/buzz_clk_div.vhd" in Library work.
+Architecture buzz_clk_div of Entity buzz_clk_div is up to date.
+Compiling vhdl file "K:/Final Project/count_clk_div.vhd" in Library work.
+Entity <count_clk_div> compiled.
+Entity <count_clk_div> (Architecture <count_clk_div>) compiled.
+Compiling vhdl file "K:/Final Project/buzzerWrapper.vhd" in Library work.
+Entity <buzzerwrapper> compiled.
+ERROR:HDLParsers:3312 - "K:/Final Project/buzzerWrapper.vhd" Line 46. Undefined symbol 'count_clk_div'.
+ERROR:HDLParsers:3011 - "K:/Final Project/buzzerWrapper.vhd" Line 74. End Identifier seq_process does not match declaration, seq_proc.
+ERROR:HDLParsers:3312 - "K:/Final Project/buzzerWrapper.vhd" Line 76. Undefined symbol 'proc'.
+ERROR:HDLParsers:1209 - "K:/Final Project/buzzerWrapper.vhd" Line 76. proc: Undefined symbol (last report in this block)
+ERROR:HDLParsers:164 - "K:/Final Project/buzzerWrapper.vhd" Line 77. parse error, unexpected TOKBEGIN, expecting OPENPAR or TICK or LSQBRACK
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.29 secs
+ 
+--> 
+
+Total memory usage is 210196 kilobytes
+
+Number of errors   :    5 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -29,6 +29,13 @@ signal PS,NS : state_type;
 -- Intermediate Signal Declarations
 signal Correct : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 
+-- Passkey Declaration
+-- SET PASSKEY HERE
+signal PASSKEY_CHAR0 : STD_LOGIC_VECTOR(3 downto 0) := x"1";
+signal PASSKEY_CHAR1 : STD_LOGIC_VECTOR(3 downto 0) := x"2";
+signal PASSKEY_CHAR2 : STD_LOGIC_VECTOR(3 downto 0) := x"3";
+signal PASSKEY_CHAR3 : STD_LOGIC_VECTOR(3 downto 0) := x"4";
+
 begin
 
 sync_proc: process(CLK)
@@ -44,31 +51,42 @@ begin
 		NS <= A;
 		
 		when A =>
-		if(INPUT = "0001") then Correct(0) <= '1';
+		if(INPUT = PASSKEY_CHAR0) then Correct(0) <= '1';
 		end if;
 		NS <= B;
 		
 		when B =>
-		if(INPUT = "0010") then Correct(1) <= '1';
+		if(INPUT = PASSKEY_CHAR1) then Correct(1) <= '1';
 		end if;
 		NS <= C;
 		
 		when C =>
-		if(INPUT = "0011") then Correct(2) <= '1';
+		if(INPUT = PASSKEY_CHAR2) then Correct(2) <= '1';
 		end if;
 		NS <= D;
 		
 		when D =>
-		if(INPUT = "0100") then Correct(3) <= '1';
+		if(INPUT = PASSKEY_CHAR3) then Correct(3) <= '1';
 		end if;
       NS <= IDLE;		
 	end case;
 		
 end process comb_proc;
 
-DETECTED <= '1' when (Correct = "1111") else
-            '0';
+correct_proc: process(Correct)
+begin
 
+	if(Correct = "1111") then
+		Detected <= '1';
+		Correct <= "0000";
+	else 
+		Detected <= '0';
+	end if;
+	
+end process correct_proc;
+
+--DETECTED <= '1' when (Correct = "1111") else
+--            '0';
 
 end Behavioral;
 
